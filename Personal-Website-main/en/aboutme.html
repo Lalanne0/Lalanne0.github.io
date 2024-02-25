@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vincent Lalanne</title>
+        <link rel="stylesheet" href="css/styles_common.css" />
+        <link rel="stylesheet" href="css/styles_aboutme.css" />
+        <link rel="stylesheet" href="../src/fonts/fonts.css" />
+        <link rel="icon" href="../images/website_logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <!-- Homepage -->
+        <div class="homepage-background">
+            <div class="home-circle-div">
+                <img class="parallax gradient-circle circle-1" name="4" src="../images/gradient_circle.png" />
+            </div>
+            <div class="home-circle-div">
+                <img class="parallax gradient-circle circle-2" name="6" src="../images/gradient_circle.png" />
+            </div>
+
+            <div class="margin-div homepage-div js-animation-aboutme">
+                <div class="aboutme-div">
+                    <div class="aboutme-text js-hidden two-s">
+                        <p class="aboutme-p">About me</p>
+                    </div>
+                    <div class="description-text">
+                        <p class="js-hidden two-s">
+                            My name is Vincent Lalanne, I am a student at the École des Mines de Saint-Étienne, a top French engineering school. I studied maths, physics and engineering in detail for 2 years in a preparatory class to
+                            integrate it, and still love these subjects!
+                        </p>
+                        <p class="js-hidden two-s">
+                            I have always wanted to get involved in state-of-the-art technology, that is why I chose to specialise in computer science and microelectronics. I feel motivated by knowing that my contribution will be useful to
+                            other people, and am always looking for new challenges and opportunities to learn and grow.
+                        </p>
+                        <p class="js-hidden two-s">I remain curious about all sorts of things, because I believe that understanding the work of others plays a major role in the success of our own.</p>
+                        <p class="js-hidden two-s">In the future, I want to bring together my skills and my passions: understand a software's architecture, secure a web application, create websites, coding a modern AI...</p>
+                        <p class="js-hidden two-s">
+                            I am currently looking forward to buiding up experience, and discovering work environments abroad. Check out my CV <a href="../cv/cv.pdf" target="_blank" style="color: #62626f;">here</a>!
+                        </p>
+                    </div>
+                </div>
+                <img class="photo-uniform js-hidden two-s" src="../images/photo_me.jpg" />
+            </div>
+        </div>
+
+        <!-- Bottom Part -->
+        <div class="white-background">
+            <div class="margin-div">
+                <div class="experiences-title">
+                    My experiences
+                </div>
+                <div class="experiences">
+                    <div class="js-animation-2 js-hidden">
+                        <!-- Job 1 : IP -->
+                        <div class="job-country">
+                            <div>
+                                <img src="../images/flags/flag_nz.png" />
+                                <p>New Zealand</p>
+                            </div>
+                            <div>
+                                2023 -<br />
+                                2024
+                            </div>
+                        </div>
+                        <div class="job-logo">
+                            <img src="../images/experiences/logo_uoa.png" />
+                        </div>
+                        <div class="job-title">
+                            The University of Auckland
+                        </div>
+                        <div class="job-description">
+                            Studying at the other end of the world is a way for me to gain perspective on subjects I like while challenging myself.
+                        </div>
+                    </div>
+                    <div class="js-animation-2 js-hidden">
+                        <!-- Job 2 : Encapsulix -->
+                        <div class="job-country">
+                            <div>
+                                <img src="../images/flags/flag_fr.png" />
+                                <p>France</p>
+                            </div>
+                            <div>Jan. 2022</div>
+                        </div>
+                        <div class="job-logo">
+                            <img src="../images/experiences/logo_encaps.png" />
+                        </div>
+                        <div class="long-job-title">
+                            Encapsulix
+                        </div>
+                        <div class="job-description">
+                            Worked as an intern to process equipment for large scale nano-technology Atomic Layer Deposition.
+                        </div>
+                    </div>
+                    <div class="js-animation-2 js-hidden">
+                        <!-- Job seek -->
+                        <div class="job-seek-message">
+                            It is a bit empty here... Would you help me to fill it?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer comment -->
+            <div class="footer-comment">
+                <p>Vincent Lalanne. 2024.</p>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-navbar">
+            <div class="mobile-tabs">
+                <div>
+                    <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
+                </div>
+                <div class="mobile-flag" onclick="changeLanguage()"></div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-flex">
+                <div>
+                    <img class="header-image" src="../images/website_logo.png" onclick="window.location='index.html';" />
+                </div>
+                <div class="tabs">
+                    <div>
+                        <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleAboutMeClick()" href="">About me</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="top-right-image" onclick="handleTopRightClick()"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../src/js/animations.js"></script>
+        <script src="../src/js/parallax.js"></script>
+        <script src="../src/js/top_right_button.js"></script>
+        <script src="../src/js/tabs.js"></script>
+        <script src="../src/js/aboutme_homepage.js"></script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vincent Lalanne</title>
+        <link rel="stylesheet" href="css/styles_common.css" />
+        <link rel="stylesheet" href="css/styles_projects.css" />
+        <link rel="stylesheet" href="../src/fonts/fonts.css" />
+        <link rel="icon" href="../images/website_logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <!-- Homepage -->
+        <div class="homepage-background">
+            <div class="home-circle-div">
+                <img class="parallax gradient-circle circle-1" name="4" src="../images/gradient_circle.png" />
+            </div>
+            <div class="home-circle-div">
+                <img class="parallax gradient-circle circle-2" name="4" src="../images/gradient_circle.png" />
+            </div>
+            <div class="js-animation-projects-title">
+                <div class="projects-title js-hidden two-s">
+                    Projects
+                </div>
+                <div class="projects-subtitle js-hidden two-s">
+                    Learn more about my projects in this section.
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects List -->
+        <div class="white-background">
+            <div class="wide-margin-div">
+                <div class="article-tile js-hidden" onclick="window.location = '../articles/Industrial project report.pdf';">
+                    <img src="../images/icons/icon_cybersecurity.png" />
+                    <div>
+                        <span>Creating a web app to automate pentests.</span>
+                        <p>
+                            Along with seven other students, I carried out a project for a French digital services company. In this project, we used various technologies, such as Flask, HTML/CSS/JS, Bash, as well as Python scripts. In the
+                            interests of anonymity, some names and contents have been removed.
+                        </p>
+                    </div>
+                </div>
+                <div class="article-tile js-hidden" onclick="window.location = '../articles/Prototyping project report.pdf';">
+                    <img src="../images/icons/icon_electronics.png" />
+                    <div>
+                        <span>Designing a capacitive load cell.</span>
+                        <p>I thought about how to make lifts safer, and designed a sensor to achieve this. I used pure electronics, assembly, beam mechanics, as well as 3D modelling and prototype experiments.</p>
+                    </div>
+                </div>
+                <div class="article-tile js-hidden" onclick="window.location = '../articles/Machine Learning report.pdf';">
+                    <img src="../images/icons/icon_ai.png" />
+                    <div>
+                        <span>Discovering AI with Scikit-learn.</span>
+                        <p>I took my first steps in AI using the MNIST dataset. I explored different possibilities for optimising learning and then developed a neural network to compare the results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-navbar">
+            <div class="mobile-tabs">
+                <div>
+                    <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleProjectsClick()" href="">Projects</a>
+                </div>
+                <div>
+                    <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
+                </div>
+                <div class="mobile-flag" onclick="changeLanguage()"></div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-flex">
+                <div>
+                    <img class="header-image" src="../images/website_logo.png" onclick="window.location='index.html';" />
+                </div>
+                <div class="tabs">
+                    <div>
+                        <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleProjectsClick()" href="">Projects</a>
+                    </div>
+                    <div>
+                        <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="top-right-image" onclick="handleTopRightClick()"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../src/js/animations.js"></script>
+        <script src="../src/js/parallax.js"></script>
+        <script src="../src/js/top_right_button.js"></script>
+        <script src="../src/js/tabs.js"></script>
+    </body>
+</html>
