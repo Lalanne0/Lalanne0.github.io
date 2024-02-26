@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Vincent Lalanne</title>
+    </head>
+
+    <body>
+      <p>
+        Bonjour et bienvenue sur mon site !
+        <ul>
+            <li><a href="#ImportanceTexte">Niveaux d'importance d'un texte</a></li>
+            <li><a href="#ListePuces">Liste à puces</a></li>
+            <li><a href="#Hyperlinks">Liens hypertextes</a></li>
+            <li><a href="#Images">Insérer des images</a></li>
+            <li><a href="#testsCSS">Mes débuts en CSS</a></li>
+        </ul>
+      </p>
+
+        <p>
+            Waw ! un paragraphe.<br />
+            Je peux même faire un retour à la ligne !!
+        </p>
+        <!-- Le / à la fin de br montre que c'est une balise orpheline -->
+        <h1>Je peux écrire un titre</h1>
+        <h2>Et même un sous-titre</h2>
+
+        <!-- ******************* NIVEAUX D'IMPORTANCE D'UN TEXTE ******************* -->
+
+        <h1 id="ImportanceTexte">Mettre du texte en valeur</h1>
+        <p>
+            Ici je peux <em>mettre en italique</em> un texte. Faible mise en valeur.<br />
+            Là je peux <strong>mettre en gras</strong> un texte. Beaucoup de valeur.<br />
+            Et là je peux <mark>surligner</mark> le texte. Incroyable ! <br />
+        </p>
+        <p>
+            Ce qui est incroyable, c'est que les moteurs de recherche privilégient les mots en strong.<br />
+            ex : Si je recherche "vincent lalanne" et que mon site contient ces mots en strong, il aura un meilleur référencement héhé
+        </p>
+
+        <!-- ******************* LISTES A PUCES ******************* -->
+        <h1 id="ListePuces">Créer des listes à puces</h1>
+      <p>
+        <ul>
+            <!-- définit toute la liste -->
+            <li>Fraises</li>
+            <!-- délimite un élément de la liste (une puce) -->
+            <li>Framboises</li>
+            <ul>
+                <li>Sauvages</li>
+            </ul>
+            <ul>
+                <li>En boîte</li>
+            </ul>
+            <li>Cerises</li>
+        </ul>
+        <ol>
+            <li>on fait ça...</li>
+            <li>et voilà !</li>
+        </ol>
+      </p>
+        <!-- ******************* LIENS HYPERTEXTE ******************* -->
+        <h1 id="Hyperlinks">Liens hypertextes et renvois</h1>
+        <p>
+        Lien vers un site externe :
+        <a href="https://www.linkedin.com/in/vincent-lalanne1/" target="_blank">LinkedIn</a><br />
+        <!-- L'attribut target="_blank" fait ouvrir le lien dans un nouvel onglet -->
+        Lien vers une autre page du site :
+        <a href="../SecondPage/AboutMe.html" title="Come and read my story!">About Me</a><br />
+        Mail :
+        <a href="mailto:vlalanne0@gmail.com">vlalanne0@gmail.com</a><br />
+        Téléchargez ma poésie :
+        <a href="poesie.txt">en cliquant ici</a>
+        </p>
+
+        <!-- ******************* IMAGES ******************* -->
+        <h1 id="Images">Insérer des images</h1>
+        <p>
+          Mon École : <br />
+          <img src="../images/mines_st_etienne.png" alt="Mines Saint-Etienne" title="Mines de Saint-Étienne"/>
+          <!-- alt pour le texte alternatif pour malvoyants, title pour le texte quand on survole la photo -->
+          <!-- on peut aussi utiliser la balise figure pour donner une légende à l'image -->
+        </p>
+
+        <h1 id="testsCSS">Mes débuts en CSS</h1>
+        <p class="iWantThisGreen">
+          Je veux écrire ce paragraphe en vert !
+        </p>
+        <p>
+          Mais celui-ci en noir.
+        </p>
+        <p>
+          Sur ce paragraphe, je ne veux <span class="iWantThisOrange">que cela</span> en orange.
+        </p>
+        <p>
+          span s'utilise au sein d'un paragraphe pour sélectionner quelques mots uniquement.
+        </p>
+        <div>
+          <p>
+            div s'utilise pour créer entourer un bloc de texte. Elles provoquent un retour à la ligne.
+          </p>
+        </div>
+
+    </body>
+</html>
