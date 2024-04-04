@@ -69,7 +69,7 @@ b{
     height: 4.3vh;
     width: 4.3vh;
     top: 25%;
-    background-image: url(../../images/flags/flag_en.png);
+    background-image: url(../../static/images/flags/flag_en.png);
     background-size: cover;
     cursor: pointer;
 }
