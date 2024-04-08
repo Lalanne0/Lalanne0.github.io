@@ -100,7 +100,7 @@ b{
 .mobile-flag {
     height: 4.3vh;
     width: 4.3vh;
-    background-image: url(../../images/flags/flag_fr.png);
+    background-image: url(../../static/images/flags/flag_fr.png);
     background-size: cover;
     margin: auto;
     margin-top: 2vh;
@@ -149,7 +149,7 @@ b{
 
 @media (max-width: 800px) {
     .top-right-image {
-        background-image: url(../../images/icons/icon_menu.png);
+        background-image: url(../../static/images/icons/icon_menu.png);
     }
     .tabs {
         visibility: hidden;

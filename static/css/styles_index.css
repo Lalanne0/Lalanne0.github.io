@@ -1,7 +1,7 @@
 /* Homepage */
 
 .homepage-background {
-    background-image: url(../../images/bg_crosses.png);
+    background-image: url(../../static/images/bg_crosses.png);
     height: 100%;
     background-position: left;
     background-repeat: no-repeat;
@@ -196,7 +196,7 @@
 /* Contact */
 
 .contact-background {
-    background-image: url(../../images/bg_crosses.png);
+    background-image: url(../../static/images/bg_crosses.png);
     height: 100%;
     background-position: left;
     background-repeat: no-repeat;

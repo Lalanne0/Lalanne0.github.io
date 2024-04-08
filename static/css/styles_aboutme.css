@@ -1,7 +1,7 @@
 /* Homepage */
 
 .homepage-background {
-    background-image: url(../../images/bg_crosses.png);
+    background-image: url(../../static/images/bg_crosses.png);
     background-position: left;
     background-repeat: repeat-y;   
     background-size: cover;
