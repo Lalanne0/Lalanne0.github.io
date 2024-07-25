@@ -101,6 +101,10 @@
     color: #26262C;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* Responsive */
 
