@@ -1,120 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr" style="scroll-behavior: smooth;">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Vincent Lalanne</title>
-        <link rel="stylesheet" href="css/styles_common.css" />
-        <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
-        <link rel="stylesheet" href="../src/fonts/fonts.css" />
-        <link rel="icon" href="../static/images/website_logo.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
-    <body>
-        <!-- Homepage -->
-        <div class="homepage-background">
-            <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
-            </div>
-            <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-2" name="6" src="../static/images/gradient_circle.png" />
-            </div>
 
-            <div class="margin-div homepage-div js-animation-aboutme">
-                <div class="aboutme-div">
-                    <div class="aboutme-text js-hidden two-s">
-                        <p class="aboutme-p">À propos de moi</p>
-                    </div>
-                    <div class="description-text">
-                        <p class="js-hidden two-s">
-                            Je m'appelle Vincent Lalanne, j'étudie à l'Ecole des Mines de Saint-Etienne et suis spécialisé dans l'informatique et la microélectronique.
-                        </p>
-                        <p class="js-hidden two-s">
-                            Je crois que comprendre le fonctionnement d'un ordinateur au niveau hardware permet une réflexion plus profonde et une meilleur efficacité avec le code que j'écris.
-                        </p>
-                        <p class="js-hidden two-s">
-                            Dans le futur, j'aimerais que mes compétences et mes passions se rejoignent : valoriser des données en créant une IA innovante et inclusive, améliorer la vie personnelle et professionnelle des gens, ou aider la recherche sur des sujets variés.</p>
-                        <p class="js-hidden two-s">Je suis motivé par l'idée que mon travail sera utile à autrui, et suis toujours à la recherche de nouveaux défis et opportunités pour apprendre.</p>
-                        <p class="js-hidden two-s">
-                            Je souhaite actuellement acquérir de l'expérience, et découvrir des environnements de travail qui me sont étrangers. Jetez un coup d'oeil à mon CV
-                            <a href="../static/cv/cv.pdf" target="_blank" style="color: #62626f;">ici</a>!
-                        </p>
-                    </div>
-                </div>
-                <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" />
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <title>Vincent Lalanne</title>
+    <link rel="stylesheet" href="css/styles_common.css" />
+    <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
+    <link rel="stylesheet" href="../src/fonts/fonts.css" />
+    <link rel="icon" href="../static/images/website_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Homepage -->
+    <div class="homepage-background">
+        <div class="home-circle-div">
+            <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
+        </div>
+        <div class="home-circle-div">
+            <img class="parallax gradient-circle circle-2" name="6" src="../static/images/gradient_circle.png" />
         </div>
 
-        <!-- Bottom Part -->
-        <div class="white-background">
-            <div class="margin-div">
-                <div class="experiences-title">
-                    Mon expérience
+        <div class="margin-div homepage-div js-animation-aboutme">
+            <div class="aboutme-div">
+                <div class="aboutme-text js-hidden two-s">
+                    <p class="aboutme-p">À propos de moi</p>
                 </div>
-                <div class="experiences">
-                    <div class="js-animation-2 js-hidden">
-                        <!-- Job 1 : UoA -->
-                        <div class="job-country">
-                            <div>
-                                <img src="../static/images/flags/flag_nz.png" />
-                                <p>Nouvelle-Zélande</p>
-                            </div>
-                            <div>
-                                2023 -<br />
-                                2024
-                            </div>
-                        </div>
-                        <div class="job-logo">
-                            <img src="../static/images/experiences/logo_uoa.png" />
-                        </div>
-                        <div class="job-title">
-                            The University of Auckland
-                        </div>
-                        <div class="job-description">
-                            Étudier à l'autre bout du monde est pour moi un moyen d'approfondir des sujets que j'aime tout en me mettant au défi.
-                        </div>
-                    </div>
-                    <div class="js-animation-2 js-hidden">
-                        <!-- Job 2 : project -->
-                        <div class="job-country">
-                            <div>
-                                <img src="../static/images/flags/flag_fr.png" />
-                                <p>France</p>
-                            </div>
-                            <div>2024</div>
-                        </div>
-                        <div class="job-logo">
-                            <img src="../static/images/experiences/ml_project.png" />
-                        </div>
-                        <div class="long-job-title">
-                            Projets
-                        </div>
-                        <div class="job-description">
-                            Dans mon temps libre, j'aime me plonger dans les domaines qui me plaisent. Quelques exemples <a onclick="handleProjectsClick()" href="projects.html" style="color: #62626f;">ici</a> !
-                        </div>
-                    </div>
-                    <div class="js-animation-2 js-hidden">
-                        <!-- Job seek -->
-                        <div class="job-seek-message">
-                            C'est un peu vide par ici... m'aideriez-vous à remplir cette case ?
-                        </div>
-                    </div>
+                <div class="description-text">
+                    <p class="js-hidden two-s">
+                        Je m'appelle Vincent, j'ai étudié à l'Ecole des Mines de Saint-Etienne et suis spécialisé dans
+                        l'informatique et la microélectronique.
+                    </p>
+                    <p class="js-hidden two-s">
+                        Je crois que comprendre le fonctionnement d'un ordinateur au niveau hardware permet une
+                        réflexion plus profonde et une meilleur efficacité avec le code que j'écris.
+                    </p>
+                    <p class="js-hidden two-s">
+                        Cela est particulièrement vrai pour la Data Science. Comprendre la théorie derrière un modèle
+                        permet également de l'optimiser beaucoup plus intuitivement !</p>
+                    <p class="js-hidden two-s">Je suis motivé par l'idée que mon travail sera utile à autrui, et suis
+                        toujours à la recherche de nouveaux défis et opportunités pour apprendre.</p>
+                    <p class="js-hidden two-s">
+                        Je souhaite actuellement acquérir de l'expérience, et découvrir des environnements de travail
+                        qui me sont étrangers. Jetez un coup d'oeil à mon CV
+                        <a href="../static/cv/cv.pdf" target="_blank" style="color: #62626f;">ici</a>!
+                    </p>
                 </div>
             </div>
+            <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" />
+        </div>
+    </div>
 
-            <!-- Footer comment -->
-            <div class="footer-comment">
-                <p>Vincent Lalanne. 2024.</p>
+    <!-- Bottom Part -->
+    <div class="white-background">
+        <div class="margin-div">
+            <div class="experiences-title">
+                Mes expériences
+            </div>
+            <div class="experiences">
+                <div class="js-animation-2 js-hidden">
+                    <!-- Job : DataScientest -->
+                    <div class="job-country">
+                        <div>
+                            <img src="../static/images/flags/flag_fr.png" />
+                            <p>Paris</p>
+                        </div>
+                        <div>
+                            2024 -<br />
+                        </div>
+                    </div>
+                    <div class="job-logo">
+                        <img src="../static/images/experiences/logo_dst.png" />
+                    </div>
+                    <div class="job-title">
+                        Machine Learning Engineer
+                    </div>
+                    <div class="job-description">
+                        J'ai crée des formations en Data Science et enseigné à des professionnels,
+                        gagnant une connaissance approfondie.
+                    </div>
+                </div>
+                <div class="js-animation-2 js-hidden">
+                    <!-- Job : Auckland -->
+                    <div class="job-country">
+                        <div>
+                            <img src="../static/images/flags/flag_nz.png" />
+                            <p>Nouvelle-Zélande</p>
+                        </div>
+                        <div>
+                            2023 -<br />
+                            2024
+                        </div>
+                    </div>
+                    <div class="job-logo">
+                        <img src="../static/images/experiences/logo_uoa.png" />
+                    </div>
+                    <div class="job-title">
+                        The University of Auckland
+                    </div>
+                    <div class="job-description">
+                        Etudier à l'autre bout du monde est un moyen pour moi de gagner en perspective sur les sujets
+                        que j'aime tout en me challengant.
+                    </div>
+                </div>
+                <div class="js-animation-2 js-hidden">
+                    <!-- Job : project -->
+                    <div class="job-country">
+                        <div>
+                            <img src="../static/images/flags/flag_fr.png" />
+                            <p>France</p>
+                        </div>
+                        <div>2024</div>
+                    </div>
+                    <div class="job-logo">
+                        <img src="../static/images/experiences/ml_project.png" />
+                    </div>
+                    <div class="long-job-title">
+                        Projects
+                    </div>
+                    <div class="job-description">
+                        Dans mon temps libre, j'aime explorer ces sujets plus en profondeur. N'hésitez pas à jeter un
+                        œil à la section
+                        <a onclick="handleProjectsClick()" href="projects.html" style="color: #62626f;">projets</a>.
+                    </div>
+                </div>
+                <div class="js-animation-2 js-hidden">
+                    <!-- Job seek -->
+                    <div class="job-seek-message">
+                        C'est un peu vide par ici... M'aideriez-vous à remplir cette case?
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Footer comment -->
+        <div class="footer-comment">
+            <p>Vincent Lalanne. 2026.</p>
+        </div>
+    </div>
 
-        <!-- Mobile Navbar -->
-        <div class="mobile-navbar">
-            <div class="mobile-tabs">
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="mobile-tabs">
+            <div>
+                <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
+            </div>
+            <div>
+                <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>
+            </div>
+            <div>
+                <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projets</a>
+            </div>
+            <div>
+                <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
+            </div>
+            <div class="mobile-flag" onclick="changeLanguage()"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-flex">
+            <div>
+                <img class="header-image" src="../static/images/website_logo.png"
+                    onclick="window.location='index.html';" />
+            </div>
+            <div class="tabs">
                 <div>
                     <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
                 </div>
                 <div>
-                    <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>
+                    <a class="tab" onclick="handleAboutMeClick()" href="">A propos</a>
                 </div>
                 <div>
                     <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projets</a>
@@ -122,40 +177,18 @@
                 <div>
                     <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
                 </div>
-                <div class="mobile-flag" onclick="changeLanguage()"></div>
+            </div>
+            <div>
+                <div class="top-right-image" onclick="handleTopRightClick()"></div>
             </div>
         </div>
+    </div>
 
-        <!-- Header -->
-        <div class="header">
-            <div class="header-flex">
-                <div>
-                    <img class="header-image" src="../static/images/website_logo.png" onclick="window.location='index.html';" />
-                </div>
-                <div class="tabs">
-                    <div>
-                        <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleAboutMeClick()" href="">A propos</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projets</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="top-right-image" onclick="handleTopRightClick()"></div>
-                </div>
-            </div>
-        </div>
+    <script src="../src/js/animations.js"></script>
+    <script src="../src/js/parallax.js"></script>
+    <script src="../src/js/top_right_button.js"></script>
+    <script src="../src/js/tabs.js"></script>
+    <script src="../src/js/aboutme_homepage.js"></script>
+</body>
 
-        <script src="../src/js/animations.js"></script>
-        <script src="../src/js/parallax.js"></script>
-        <script src="../src/js/top_right_button.js"></script>
-        <script src="../src/js/tabs.js"></script>
-        <script src="../src/js/aboutme_homepage.js"></script>
-    </body>
 </html>

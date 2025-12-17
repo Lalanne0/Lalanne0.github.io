@@ -117,16 +117,16 @@
     margin-bottom: 0;
 }
 
-.electronics-div {
+.data-science-div {
     margin-bottom: 8em;
 }
 
-.electronics-skill-icon {
+.data-science-skill-icon {
     width: 100px;
     margin-right: 1em;
 }
 
-.electronics-skill-title {
+.data-science-skill-title {
     font-family: 'GT Walsheim Pro Bold';
     font-size: 70px;
     color: #26262C;
@@ -295,7 +295,7 @@
 
 /* Secondary skills column */
 @media (max-width: 980px) {
-    .electronics-div {
+    .data-science-div {
         margin-bottom: 6em;
     }
     .secondary-skills {
@@ -376,13 +376,13 @@
     }
 }
 
-/* Electronics skill */
+/* Data Science skill */
 @media (max-width: 695px) {
-    .electronics-skill-icon {
+    .data-science-skill-icon {
         width: 14.4vw;
         height: 14.4vw;
     }
-    .electronics-skill-title {
+    .data-science-skill-title {
         font-size: 9.8vw;
     }
 }
