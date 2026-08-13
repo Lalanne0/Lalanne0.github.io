@@ -2,7 +2,8 @@
 <html lang="fr" style="scroll-behavior: smooth;">
     <head>
         <meta charset="UTF-8" />
-        <title>Vincent Lalanne</title>
+        <title>Vincent Lalanne | ML Engineer</title>
+        <meta name="description" content="Vincent Lalanne - ML Engineer deployant des systemes GenAI et NLP a grande echelle. A construit une plateforme RAG utilisee quotidiennement par 150 collaborateurs. Enseigne le ML en production a des equipes d'ingenieurs en France." />
         <link rel="stylesheet" href="css/styles_common.css" />
         <link rel="stylesheet" href="../static/css/styles_index.css" />
         <link rel="stylesheet" href="../src/fonts/fonts.css" />
@@ -25,7 +26,7 @@
                     <p class="hello-p js-hidden two-s">ici Vincent</p>
                 </div>
                 <div class="description-text js-hidden two-s">
-                    Etudiant ingénieur passionné en informatique et microélectronique à l'Ecole des Mines de Saint-Etienne et l'Université d'Auckland.
+                    ML Engineer, je développe des systèmes GenAI et NLP et j'enseigne le ML en production.
                 </div>
             </div>
         </div>
@@ -33,87 +34,61 @@
         <!-- Skills -->
         <div class="skills-background">
             <div class="margin-div">
-                <!-- Programming -->
                 <div class="js-animation-1">
-                    <div class="flex js-hidden">
-                        <img class="programming-skill-icon" src="../static/images/icons/icon_programming.png" />
-                        <p class="programming-skill-title">Programmation</p>
-                    </div>
-                    <div class="programming-flex js-hidden" style="margin-bottom: 12%;">
-                        <div class="programming-text">
-                            <p class="skill-paragraph">
-                                J'aime développer des applications et modéliser toutes sortes de choses. Je maîtrise divers langages de programmation, et ai la capacité de trouver rapidement des <b>solutions logicielles efficaces</b>.
-                            </p>
-                            <p class="skill-paragraph">
-                                J'ai appris la programmation <b>haut niveau</b> et <b>bas niveau</b> à l'école et par moi-même. J'ai eu le temps de renforcer ma compréhension des <b>structures de données</b> et des
-                                <b>architectures</b> couramment utilisées.
-                            </p>
-                            <p class="skill-paragraph">N'hésitez pas à consulter quelques <b><a onclick="handleProjectsClick()" href="projects.html" style="color: #62626f;">projets</a></b> sur lesquels j'ai travaillé.</p>
-                        </div>
-                        <div class="programming-skills">
-                            <img class="programming-image" src="../static/images/skill_programming.png" />
-                            <p class="programming-level">Familier avec</p>
-                            <p class="programming-languages-text">Assembleur / Matlab / Java / JS</p>
-                        </div>
-                    </div>
+                    <div class="skills-section-title js-hidden">Mes outils</div>
                 </div>
-                <!-- Data Science -->
-                <div class="data-science-div js-animation-1">
-                    <div class="flex js-hidden">
-                        <img class="data-science-skill-icon" src="../static/images/icons/icon_ai.png" />
-                        <p class="data-science-skill-title">Data Science</p>
-                    </div>
-                    <div class="js-hidden">
-                        <p class="skill-paragraph">
-                            J'ai une bonne connaissance des composants et des cartes électroniques. Par conséquent, je suis en mesure de développer le bon logiciel pour n'importe quel <b>hardware</b>. J'ai étudié l'architecture des
-                            microcontrôleurs, et ai une <b>expérience pratique</b>. J'ai également appris sur le processus industriel derrière la fabrication de ces éléments, du wafer de silicium au montage sur le PCB.
+                <div class="skill-cards js-animation-1">
+                    <div class="skill-card js-hidden">
+                        <img class="skill-card-icon" src="../static/images/icons/icon_ai.png" />
+                        <h3 class="skill-card-title">ML et GenAI</h3>
+                        <p class="skill-card-description">
+                            Construction et fine-tuning de modèles pour la production, du ML classique aux architectures Transformer et aux applications LLM avec pipelines RAG.
                         </p>
-                        <p class="skill-paragraph">
-                            Enfin, j'ai été initié aux technologies innovantes en matière de microélectronique. Toutes ces compétences me permettent de faire preuve de créativité et d'être efficace dans la <b>résolution de problèmes</b>.
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Keras</span>
+                        </div>
+                    </div>
+                    <div class="skill-card js-hidden">
+                        <img class="skill-card-icon" src="../static/images/icons/icon_programming.png" />
+                        <h3 class="skill-card-title">MLOps et Infrastructure</h3>
+                        <p class="skill-card-description">
+                            Conception et maintenance de pipelines ML en production : microservices conteneurisés, workflows CI/CD, suivi d'expériences et streaming de données en temps réel.
                         </p>
-                    </div>
-                </div>
-                <!-- Other skills -->
-                <div class="secondary-skills">
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_ai.png" />
-                        <div class="secondary-skill-title-two-lines">
-                            <p style="margin: 0;">Intelligence</p>
-                            <p style="margin: 0;">Artificielle</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">MLflow</span>
+                            <span class="skill-tag">Airflow</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">PostgreSQL</span>
                         </div>
-                        <p class="secondary-skill-text">Je suis familier avec les réseaux de neurones et sait les utiliser pour optimiser des solutions.</p>
                     </div>
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_cybersecurity.png" />
-                        <div class="secondary-skill-title"><p style="margin: 0;">Cybersecurité</p></div>
-                        <p class="secondary-skill-text">Je peux identifier des menaces et vulnérabilités, ainsi qu'effectuer des attaques basiques.</p>
-                        <p class="secondary-skill-text"></p>
-                    </div>
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_linux.png" />
-                        <div class="secondary-skill-title"><p style="margin: 0;">Linux</p></div>
-                        <p class="secondary-skill-text">Je sais naviguer sur Linux et tirer profit des paquets qui lui sont propres.</p>
-                    </div>
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_languages.png" />
-                        <div class="secondary-skill-title"><p style="margin: 0;">Langues</p></div>
-                        <p class="secondary-skill-text">Je parle français, anglais et japonais couramment, et ai étudié 8 ans l'espagnol.</p>
-                    </div>
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_teamwork.png" />
-                        <div class="secondary-skill-title-two-lines">
-                            <p style="margin: 0;">Travail</p>
-                            <p style="margin: 0;">d'équipe</p>
+                    <div class="skill-card js-hidden">
+                        <img class="skill-card-icon" src="../static/images/icons/icon_electronics.png" />
+                        <h3 class="skill-card-title">Observabilité et Serving</h3>
+                        <p class="skill-card-description">
+                            Exploitation de systèmes en production avec des stacks d'observabilité complètes et serving de modèles ML via des APIs performantes avec recherche vectorielle.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">Datadog</span>
+                            <span class="skill-tag">ELK Stack</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Qdrant</span>
+                            <span class="skill-tag">Elasticsearch</span>
+                            <span class="skill-tag">Nginx</span>
                         </div>
-                        <p class="secondary-skill-text">Je mène ou participe souvent à des projets d'équipe, qui donnent toujours naissance à de belles idées.</p>
-                    </div>
-                    <div class="secondary-skill js-animation-2 js-hidden">
-                        <img class="secondary-skill-icon" src="../static/images/icons/icon_design.png" />
-                        <div class="secondary-skill-title-two-lines">
-                            <p style="margin: 0;">Design</p>
-                            <p style="margin: 0;">Graphique</p>
-                        </div>
-                        <p class="secondary-skill-text">Je tiens à toujours rendre un travail bien présenté. Ce site fait office de portfolio.</p>
                     </div>
                 </div>
             </div>
@@ -130,12 +105,15 @@
                     <p class="hello-p js-hidden">contact</p>
                 </div>
                 <div class="contact-text js-hidden">
-                    Ecrivez-moi un mail
+                    Écrivez-moi un mail
                 </div>
                 <div class="email-text-div js-hidden">
-                    <a href="mailto: vlalanne0@gmail.com" class="email-text">vlalanne0@gmail.com</a>
+                    <a href="mailto:vlalanne0@gmail.com" class="email-text">vlalanne0@gmail.com</a>
                 </div>
-                <div class="contact-text js-hidden">Ou ajoutez-moi sur <a href="https://www.linkedin.com/in/vincent-lalanne1/" target="_blank" style="color: #62626f;">LinkedIn</a></div>
+                <div class="contact-links js-hidden">
+                    <a href="https://www.linkedin.com/in/vincent-lalanne1/" target="_blank" class="contact-link">LinkedIn</a>
+                    <a href="https://github.com/Lalanne0" target="_blank" class="contact-link">GitHub</a>
+                </div>
             </div>
         </div>
 

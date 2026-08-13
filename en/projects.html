@@ -2,7 +2,8 @@
 <html lang="en" style="scroll-behavior: smooth;">
     <head>
         <meta charset="UTF-8" />
-        <title>Vincent Lalanne</title>
+        <title>Vincent Lalanne | Projects</title>
+        <meta name="description" content="Technical projects by Vincent Lalanne: production RAG systems, low-latency ML inference, NLP solvers, and scientific computing packages." />
         <link rel="stylesheet" href="css/styles_common.css" />
         <link rel="stylesheet" href="../static/css/styles_projects.css" />
         <link rel="stylesheet" href="../src/fonts/fonts.css" />
@@ -24,7 +25,7 @@
                     Projects
                 </div>
                 <div class="projects-subtitle js-hidden two-s">
-                    Learn more about my projects in this section.
+                    A selection of things I have built, from production systems to open-source tools.
                 </div>
             </div>
         </div>
@@ -32,58 +33,99 @@
         <!-- Projects List -->
         <div class="white-background">
             <div class="wide-margin-div">
-                
-                <!-- LLM project -->
-                <a href="../static/articles/Implementing_a_chatbot_via_API_call.pdf" target="_blank">
+
+                <!-- Liora Assistant -->
+                <div class="article-tile js-hidden">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Liora Assistant</h2>
+                        <p class="article-tile-subtitle">Production RAG Platform</p>
+                        <p class="article-tile-description">
+                            Architected and shipped a retrieval-augmented generation system used daily by 150 employees via Slack. The platform runs on 5 FastAPI microservices across 13 Docker containers, ingesting multiple GB of internal data from AWS S3 into a Qdrant vector store with parent-child chunking and event-driven indexing via Redis Streams. Built with production observability (ELK, Prometheus, Grafana) and hardened with JWT/RBAC, rate limiting, and prompt-injection defences.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">FastAPI</span>
+                            <span class="article-tile-tag">Docker</span>
+                            <span class="article-tile-tag">Qdrant</span>
+                            <span class="article-tile-tag">Redis Streams</span>
+                            <span class="article-tile-tag">AWS S3</span>
+                            <span class="article-tile-tag">Prometheus</span>
+                            <span class="article-tile-tag">Grafana</span>
+                        </div>
+                        <span class="article-tile-link" style="color: #8b8b9a; cursor: default;">Proprietary</span>
+                    </div>
+                </div>
+
+                <!-- Low-Latency Stock Predictor -->
+                <a href="https://github.com/Lalanne0/low-latency-prediction" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/llm.png" />
-                        <div>
-                            <span>Implementing an LLM and experimenting on its parameters.</span>
-                            <p>
-                                I called Anthropic's API for their chatbot Claude, and implemented it in a Flask replica of my website. I explored the concept of metaprompts (or system prompts) and the opportunities that they have, as well as the level of security they provide.
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Low-Latency Stock Predictor</h2>
+                            <p class="article-tile-subtitle">Real-time inference optimisation</p>
+                            <p class="article-tile-description">
+                                Achieved a 15-25x latency reduction (from ~100 us sklearn baseline to ~6 us) through progressive compiler-level optimisations: bypassed scikit-learn with raw NumPy, algebraically fused the StandardScaler into model weights for zero-cost normalisation, downcast to float32, and compiled the hot path via Numba @njit / LLVM. Streams live market predictions via WebSocket to a TradingView terminal with a multi-stage Docker build and synthetic data demo mode.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">Numba</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">WebSocket</span>
+                                <span class="article-tile-tag">Docker</span>
+                                <span class="article-tile-tag">LLVM</span>
+                            </div>
+                            <span class="article-tile-link">
+                                View on GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Industrial project -->
-                <a href="../static/articles/Industrial project report.pdf" target="_blank">
+                <!-- Semantix Breaker -->
+                <a href="https://github.com/Lalanne0/semantix-breaker" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/cyber_project.jpg" />
-                        <div>
-                            <span>Creating a web app to automate pentests.</span>
-                            <p>
-                                Along with seven other students, I carried out a project for a French digital services company. In this project, we used various technologies, such as Flask, HTML/CSS/JS, Bash, as well as Python scripts to create a seamless interface allowing users to launch a simple network attack without coding knowledge.
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Semantix Breaker</h2>
+                            <p class="article-tile-subtitle">AI semantic word-game solver</p>
+                            <p class="article-tile-description">
+                                Built a bilingual (EN/FR) real-time similarity engine that identifies a hidden word among 5,000 candidates by minimising cosine-similarity error. Serves live queries against Google's 3M-word Word2Vec model and 60,000 French FastText vectors (~800 MB corpus), with vectorised NumPy distance computations for sub-millisecond response times.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">Word2Vec</span>
+                                <span class="article-tile-tag">FastText</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">Docker</span>
+                            </div>
+                            <span class="article-tile-link">
+                                View on GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Prototype project -->
-                <a href="../static/articles/Prototyping project report.pdf" target="_blank">
+                <!-- Torque Clustering -->
+                <a href="https://github.com/Lalanne0/torque-clustering-python" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/proto_project.png" />
-                        <div>
-                            <span>Designing a capacitive load cell.</span>
-                            <p>
-                                I thought about how to make lifts safer, and designed a sensor to achieve this. I used pure electronics, assembly, beam mechanics, as well as 3D modelling and prototyping to conduct my experiments.
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Torque Clustering</h2>
+                            <p class="article-tile-subtitle">MATLAB to Python package port</p>
+                            <p class="article-tile-description">
+                                Ported an innovative MATLAB clustering algorithm to an installable Python package. Modernised array operations for NumPy 2.0 compatibility and integrated scikit-learn benchmarking on classic high-dimensional datasets, making the algorithm accessible to the broader Python ML community.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">Scikit-learn</span>
+                            </div>
+                            <span class="article-tile-link">
+                                View on GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Manual tree project -->
-                <a href="../static/articles/Manual tree perf comparison.pdf" target="_blank">
-                    <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/gini_tree.png" />
-                        <div>
-                            <span>Creating a manual decision tree classifier.</span>
-                            <p>
-                                I manually implemented a decision tree to classify edible and poisonous species of mushrooms based on their characteristics. I then compared the performances of the tree based on the splitting criterion used to create it (Gini impurity or entropy).
-                            </p>
-                        </div>
-                    </div>
-                </a>
             </div>
         </div>
 
@@ -107,7 +149,6 @@
         </div>
 
         <!-- Header -->
-
         <div class="header">
             <div class="header-flex">
                 <div>

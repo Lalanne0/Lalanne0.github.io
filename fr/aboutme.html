@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Vincent Lalanne</title>
+    <title>Vincent Lalanne | A propos</title>
+    <meta name="description" content="A propos de Vincent Lalanne - ML Engineer chez LIORA, diplome de l'Ecole des Mines de Saint-Etienne et de l'University of Auckland. Construction de systemes ML en production et enseignement de l'IA a des equipes en entreprise." />
     <link rel="stylesheet" href="css/styles_common.css" />
     <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
     <link rel="stylesheet" href="../src/fonts/fonts.css" />
@@ -24,26 +25,20 @@
         <div class="margin-div homepage-div js-animation-aboutme">
             <div class="aboutme-div">
                 <div class="aboutme-text js-hidden two-s">
-                    <p class="aboutme-p">À propos de moi</p>
+                    <p class="aboutme-p">A propos</p>
                 </div>
                 <div class="description-text">
                     <p class="js-hidden two-s">
-                        Je m'appelle Vincent, j'ai étudié à l'Ecole des Mines de Saint-Etienne et suis spécialisé dans
-                        l'informatique et la microélectronique.
+                        J'ai etudie l'informatique et la microelectronique a l'Ecole des Mines de Saint-Etienne, l'une des meilleures ecoles d'ingenieurs de France, et j'ai passe un an a l'University of Auckland en Nouvelle-Zelande.
                     </p>
                     <p class="js-hidden two-s">
-                        Je crois que comprendre le fonctionnement d'un ordinateur au niveau hardware permet une
-                        réflexion plus profonde et une meilleur efficacité avec le code que j'écris.
+                        Je travaille actuellement comme ML Engineer chez LIORA a Paris, ou j'ai construit une plateforme RAG utilisee au quotidien par 150 collaborateurs, repartie sur 5 microservices FastAPI et 13 conteneurs. J'ai aussi obtenu le statut de formateur le mieux note pour mes masterclasses en GenAI et MLOps aupres d'equipes d'ingenieurs chez Thales, TotalEnergies et Safran.
                     </p>
                     <p class="js-hidden two-s">
-                        Cela est particulièrement vrai pour la Data Science. Comprendre la théorie derrière un modèle
-                        permet également de l'optimiser beaucoup plus intuitivement !</p>
-                    <p class="js-hidden two-s">Je suis motivé par l'idée que mon travail sera utile à autrui, et suis
-                        toujours à la recherche de nouveaux défis et opportunités pour apprendre.</p>
+                        Mon travail couvre les applications LLM, le data engineering temps reel, les pipelines MLOps et l'observabilite en production. Je tiens a construire des systemes qui tournent vraiment en production, pas seulement dans des notebooks.
+                    </p>
                     <p class="js-hidden two-s">
-                        Je souhaite actuellement acquérir de l'expérience, et découvrir des environnements de travail
-                        qui me sont étrangers. Jetez un coup d'oeil à mon CV
-                        <a href="../static/cv/cv.pdf" target="_blank" style="color: #62626f;">ici</a>!
+                        En dehors du travail, je parle francais, anglais, japonais et un peu espagnol. N'hesitez pas a consulter mes <a href="projects.html" onclick="handleProjectsClick()" style="color: #52525e;">projets</a> ou mon <a href="../static/cv/cv.pdf" target="_blank" style="color: #52525e;">CV</a>.
                     </p>
                 </div>
             </div>
@@ -55,11 +50,11 @@
     <div class="white-background">
         <div class="margin-div">
             <div class="experiences-title">
-                Mes expériences
+                Parcours
             </div>
             <div class="experiences">
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : DataScientest -->
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Job : LIORA -->
                     <div class="job-country">
                         <div>
                             <img src="../static/images/flags/flag_fr.png" />
@@ -73,19 +68,40 @@
                         <img src="../static/images/experiences/logo_dst.png" />
                     </div>
                     <div class="job-title">
-                        Machine Learning Engineer
+                        ML Engineer
                     </div>
                     <div class="job-description">
-                        J'ai crée des formations en Data Science et enseigné à des professionnels,
-                        gagnant une connaissance approfondie.
+                        Construction d'une plateforme RAG en production (5 microservices, 13 conteneurs) utilisee quotidiennement par 150 collaborateurs. Statut de formateur le mieux note pour des masterclasses GenAI et MLOps aupres d'equipes en entreprise. Encadrement d'equipes juniors sur des projets d'extraction de documents et de ML multimodal.
                     </div>
                 </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : Auckland -->
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Education : Mines -->
+                    <div class="job-country">
+                        <div>
+                            <img src="../static/images/flags/flag_fr.png" />
+                            <p>Saint-Etienne</p>
+                        </div>
+                        <div>
+                            2021 -<br />
+                            2025
+                        </div>
+                    </div>
+                    <div class="job-logo">
+                        <img src="../static/images/experiences/ml_project.png" />
+                    </div>
+                    <div class="job-title">
+                        Ecole des Mines
+                    </div>
+                    <div class="job-description">
+                        Diplome d'ingenieur en Informatique et Microelectronique dans l'une des 10 meilleures ecoles d'ingenieurs de France. Cours de Machine Learning, Deep Learning, C/C++ et Architecture Logicielle.
+                    </div>
+                </div>
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Education : Auckland -->
                     <div class="job-country">
                         <div>
                             <img src="../static/images/flags/flag_nz.png" />
-                            <p>Nouvelle-Zélande</p>
+                            <p>Nouvelle-Zelande</p>
                         </div>
                         <div>
                             2023 -<br />
@@ -96,42 +112,15 @@
                         <img src="../static/images/experiences/logo_uoa.png" />
                     </div>
                     <div class="job-title">
-                        The University of Auckland
+                        University of Auckland
                     </div>
                     <div class="job-description">
-                        Etudier à l'autre bout du monde est un moyen pour moi de gagner en perspective sur les sujets
-                        que j'aime tout en me challengant.
-                    </div>
-                </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : project -->
-                    <div class="job-country">
-                        <div>
-                            <img src="../static/images/flags/flag_fr.png" />
-                            <p>France</p>
-                        </div>
-                        <div>2024</div>
-                    </div>
-                    <div class="job-logo">
-                        <img src="../static/images/experiences/ml_project.png" />
-                    </div>
-                    <div class="long-job-title">
-                        Projects
-                    </div>
-                    <div class="job-description">
-                        Dans mon temps libre, j'aime explorer ces sujets plus en profondeur. N'hésitez pas à jeter un
-                        œil à la section
-                        <a onclick="handleProjectsClick()" href="projects.html" style="color: #62626f;">projets</a>.
-                    </div>
-                </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job seek -->
-                    <div class="job-seek-message">
-                        C'est un peu vide par ici... M'aideriez-vous à remplir cette case?
+                        Certificat en Informatique et Genie Logiciel dans une universite classee dans le top 100 mondial (QS). Cours en Machine Learning, Architecture Logicielle, POO et Systemes de Bases de Donnees.
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Footer comment -->
         <div class="footer-comment">
             <p>Vincent Lalanne. 2026.</p>

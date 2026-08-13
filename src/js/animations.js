@@ -18,9 +18,25 @@ function displayHomepage() {
     setTimeout( () => animatedHomepage.children[1].classList.add('js-visible'), 400);
 }
 
-function displayElement1(el) {
-    setTimeout( () => el.children[0].classList.add('js-visible'), 0);
-    setTimeout( () => el.children[1].classList.add('js-visible'), 200);
+function displaySkillCards(el) {
+    // For the title element (first js-animation-1)
+    if (el.querySelector('.skills-section-title')) {
+        el.querySelector('.skills-section-title').classList.add('js-visible');
+        return;
+    }
+    // For the skill-cards container (second js-animation-1)
+    const cards = el.querySelectorAll('.skill-card');
+    if (cards.length > 0) {
+        cards.forEach((card, i) => {
+            setTimeout(() => card.classList.add('js-visible'), i * 150);
+        });
+        return;
+    }
+    // Fallback for old structure
+    if (el.children.length >= 2) {
+        setTimeout( () => el.children[0].classList.add('js-visible'), 0);
+        setTimeout( () => el.children[1].classList.add('js-visible'), 200);
+    }
 }
 
 function displayContact() {
@@ -39,7 +55,6 @@ function displayAboutMe(){
     setTimeout( () => animatedAboutMe.children[0].children[1].children[1].classList.add('js-visible'), 200); // Description
     setTimeout( () => animatedAboutMe.children[0].children[1].children[2].classList.add('js-visible'), 300); // Description
     setTimeout( () => animatedAboutMe.children[0].children[1].children[3].classList.add('js-visible'), 400); // Description
-    setTimeout( () => animatedAboutMe.children[0].children[1].children[4].classList.add('js-visible'), 500); // Description
 }
 
 function displayProjectsTitle(){
@@ -51,25 +66,31 @@ function HandleAnimateIndex(){
 
     animatedElements1.forEach(el => {
         if (elementInViewport(el)) {
-            displayElement1(el);
+            displaySkillCards(el);
         }
     });
-    
+
+    // Experience cards on about page (js-animation-2)
     var j;
     for (var i = 0; i < animatedElements2.length; i++) {
-        if (window.innerWidth > 1420){
-            if ((i%3 == 0) && elementInViewport(animatedElements2[i])) {
-                animatedElements2[i].classList.add('js-visible');
-                j = i+1;
-                setTimeout( () => animatedElements2[j].classList.add('js-visible'), 200);
-                setTimeout( () => animatedElements2[j+1].classList.add('js-visible'), 400);
-            }
+        if (elementInViewport(animatedElements2[i])) {
+            animatedElements2[i].classList.add('js-visible');
         }
-        else if(window.innerWidth > 980){
-            if ((i%2 == 0) && elementInViewport(animatedElements2[i])) {
-                animatedElements2[i].classList.add('js-visible');
-                j = i+1;
-                setTimeout( () => animatedElements2[j].classList.add('js-visible'), 200);
+    }
+
+    if (animatedContact && elementInViewport(animatedContact)) {
+        displayContact();
+    }
+}
+
+function HandleAnimateAboutMe(){
+    for (var i = 0; i < animatedElements2.length; i++) {
+        if (window.innerWidth > 1028) {
+            if (elementInViewport(animatedElements2[0])) {
+                animatedElements2.forEach((el, idx) => {
+                    setTimeout(() => el.classList.add('js-visible'), idx * 200);
+                });
+                break;
             }
         }
         else {
@@ -78,42 +99,12 @@ function HandleAnimateIndex(){
             }
         }
     }
-
-    if (elementInViewport(animatedContact)) {
-        displayContact();
-    }
-}
-
-function HandleAnimateAboutMe(){
-    for (var i = 0; i < animatedElements2.length; i++) {
-        if (window.innerWidth > 1542){ // If the 3 elements are next to each other
-            if (elementInViewport(animatedElements2[i])) {
-                animatedElements2[0].classList.add('js-visible');
-                setTimeout( () => animatedElements2[1].classList.add('js-visible'), 200);
-                setTimeout( () => animatedElements2[2].classList.add('js-visible'), 400);
-            }
-        }
-        else if(window.innerWidth > 1028){ // If 2 elements are next to each other and the 3rd is alone
-            if ((i == 0) && elementInViewport(animatedElements2[i])) { // If the 1st is in viewport
-                animatedElements2[i].classList.add('js-visible'); // Display the first 2
-                setTimeout( () => animatedElements2[1].classList.add('js-visible'), 200);
-            }
-            else if ((i == 2) && elementInViewport(animatedElements2[i])) { // If the 3rd is in viewport
-                animatedElements2[i].classList.add('js-visible'); // Display it alone
-            }
-        }
-        else { // If elements are in column
-            if (elementInViewport(animatedElements2[i])) {
-                animatedElements2[i].classList.add('js-visible');
-            }
-        }
-    }
 }
 
 function HandleAnimateArticleTiles(){
-    animatedArticleTiles.forEach(el => {
+    animatedArticleTiles.forEach((el, i) => {
         if (elementInViewport(el)) {
-            el.classList.add('js-visible');
+            setTimeout(() => el.classList.add('js-visible'), i * 100);
         }
     });
 }

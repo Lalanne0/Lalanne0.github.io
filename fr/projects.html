@@ -2,7 +2,8 @@
 <html lang="fr" style="scroll-behavior: smooth;">
     <head>
         <meta charset="UTF-8" />
-        <title>Vincent Lalanne</title>
+        <title>Vincent Lalanne | Projets</title>
+        <meta name="description" content="Projets techniques de Vincent Lalanne : systemes RAG en production, inference ML a faible latence, solveurs NLP et packages de calcul scientifique." />
         <link rel="stylesheet" href="css/styles_common.css" />
         <link rel="stylesheet" href="../static/css/styles_projects.css" />
         <link rel="stylesheet" href="../src/fonts/fonts.css" />
@@ -24,7 +25,7 @@
                     Projets
                 </div>
                 <div class="projects-subtitle js-hidden two-s">
-                    Découvrez quelques projets auxquels j'ai participé.
+                    Une sélection de ce que j'ai construit, des systemes en production aux outils open-source.
                 </div>
             </div>
         </div>
@@ -33,58 +34,98 @@
         <div class="white-background">
             <div class="wide-margin-div">
 
-                <!-- LLM project -->
-                <a href="../static/articles/Implementing_a_chatbot_via_API_call.pdf" target="_blank">
-                    <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/llm.png" />
-                        <div>
-                            <span>Implémenter un LLM et expérimenter sur ses paramètres.</span>
-                            <p>
-                                J'ai appelé l'API d'Anthropic pour leur chatbot Claude, et l'ai implémentée dans une réplique Flask de mon site web. J'ai exploré le concept de metaprompts (ou prompt système) et les opportunités qu'ils présentent, ainsi que le niveau de securité qu'ils offrent.
-                            </p>
+                <!-- Liora Assistant -->
+                <div class="article-tile js-hidden">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Liora Assistant</h2>
+                        <p class="article-tile-subtitle">Plateforme RAG en production</p>
+                        <p class="article-tile-description">
+                            Conception et mise en production d'un système de génération augmentée par récupération (RAG) utilisé quotidiennement par 150 collaborateurs via Slack. La plateforme tourne sur 5 microservices FastAPI répartis sur 13 conteneurs Docker, ingérant plusieurs Go de données internes depuis AWS S3 dans un vector store Qdrant avec chunking parent-enfant et indexation événementielle via Redis Streams. Construction de l'observabilité (ELK, Prometheus, Grafana) et sécurisation via JWT/RBAC, rate limiting et défenses contre l'injection de prompts.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">FastAPI</span>
+                            <span class="article-tile-tag">Docker</span>
+                            <span class="article-tile-tag">Qdrant</span>
+                            <span class="article-tile-tag">Redis Streams</span>
+                            <span class="article-tile-tag">AWS S3</span>
+                            <span class="article-tile-tag">Prometheus</span>
+                            <span class="article-tile-tag">Grafana</span>
                         </div>
+                        <span class="article-tile-link" style="color: #8b8b9a; cursor: default;">Propriétaire</span>
                     </div>
-                </a>
-                
-                <!-- Industrial project -->
-                <a href="../static/articles/Industrial project report.pdf" target="_blank">
+                </div>
+
+                <!-- Low-Latency Stock Predictor -->
+                <a href="https://github.com/Lalanne0/low-latency-prediction" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/cyber_project.jpg" />
-                        <div>
-                            <span>Développer une web app pour automatiser des pentests.</span>
-                            <p>
-                                Avec sept autres étudiants, j'ai réalisé un projet sur plusieurs mois pour une ESN reconnue. Différentes technologies ont été utilisées dans ce projet, telles que Flask, HTML/CSS/JS, Bash, et des scripts Python, afin de créer une interface fluide permettant aux utilisateurs de lancer une attaque de réseau simple sans connaissance informatique préalable.
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Low-Latency Stock Predictor</h2>
+                            <p class="article-tile-subtitle">Optimisation d'inférence en temps réel</p>
+                            <p class="article-tile-description">
+                                Réduction de latence de 15-25x (de ~100 µs baseline sklearn à ~6 µs) par des optimisations progressives au niveau du compilateur : contournement de scikit-learn avec du NumPy brut, fusion algébrique du StandardScaler dans les poids du modèle pour une normalisation à coût zéro, downcast en float32, et compilation du chemin critique via Numba @njit / LLVM. Streaming de prédictions en temps réel via WebSocket vers un terminal TradingView avec un build Docker multi-stage et un mode démo à données synthétiques.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">Numba</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">WebSocket</span>
+                                <span class="article-tile-tag">Docker</span>
+                                <span class="article-tile-tag">LLVM</span>
+                            </div>
+                            <span class="article-tile-link">
+                                Voir sur GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Prototype project -->
-                <a href="../static/articles/Prototyping project report.pdf" target="_blank">
+                <!-- Semantix Breaker -->
+                <a href="https://github.com/Lalanne0/semantix-breaker" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/proto_project.png" />
-                        <div>
-                            <span>Designer un capteur de force capacitif.</span>
-                            <p>
-                                J'ai réfléchi à comment rendre les ascenseurs plus sûrs, et ai designé un capteur permettant d'atteindre cet objectif. J'ai utilisé de l'électronique pure, de l'assembleur, de la mécanique des poutres, de la
-                            modélisation 3D ainsi que du prototypage pour mener à bien mes expériences.
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Semantix Breaker</h2>
+                            <p class="article-tile-subtitle">Solveur sémantique de jeu de mots par IA</p>
+                            <p class="article-tile-description">
+                                Construction d'un moteur de similarité bilingue (EN/FR) en temps réel qui identifie un mot caché parmi 5 000 candidats en minimisant l'erreur de similarité cosinus. Interrogation en direct du modèle Word2Vec de Google (3M mots) et de 60 000 vecteurs FastText français (~800 Mo de corpus), avec des calculs de distance NumPy vectorisés pour des temps de réponse inférieurs à la milliseconde.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">Word2Vec</span>
+                                <span class="article-tile-tag">FastText</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">Docker</span>
+                            </div>
+                            <span class="article-tile-link">
+                                Voir sur GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Manual tree project -->
-                <a href="../static/articles/Manual tree perf comparison.pdf" target="_blank">
+                <!-- Torque Clustering -->
+                <a href="https://github.com/Lalanne0/torque-clustering-python" target="_blank">
                     <div class="article-tile js-hidden">
-                        <img src="../static/images/projects/gini_tree.png" />
-                        <div>
-                            <span>Créer manuellement un arbre de décision et étudier ses performances.</span>
-                            <p>
-                                J'ai implémenté manuellement un arbre de décision pour classer les espèces de champignons comestibles et toxiques en fonction de leurs caractéristiques. J'ai ensuite comparé les performances de l'arbre en fonction du critère de division utilisé pour le créer (impureté de Gini ou entropie).
+                        <div class="article-tile-content">
+                            <h2 class="article-tile-title">Torque Clustering</h2>
+                            <p class="article-tile-subtitle">Portage de package MATLAB vers Python</p>
+                            <p class="article-tile-description">
+                                Portage d'un algorithme de clustering innovant de MATLAB vers un package Python installable. Modernisation des opérations sur les tableaux pour la compatibilité NumPy 2.0 et intégration de benchmarks scikit-learn sur des jeux de données classiques en haute dimension, rendant l'algorithme accessible à la communauté ML Python.
                             </p>
+                            <div class="article-tile-tags">
+                                <span class="article-tile-tag">Python</span>
+                                <span class="article-tile-tag">NumPy</span>
+                                <span class="article-tile-tag">Scikit-learn</span>
+                            </div>
+                            <span class="article-tile-link">
+                                Voir sur GitHub
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                            </span>
                         </div>
                     </div>
                 </a>
+
             </div>
         </div>
 
@@ -115,7 +156,7 @@
                 </div>
                 <div class="tabs">
                     <div>
-                        <a class="tab" onclick="handleHomeClick()" href="index.html">Acceuil</a>
+                        <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
                     </div>
                     <div>
                         <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>

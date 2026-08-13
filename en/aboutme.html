@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Vincent Lalanne</title>
+    <title>Vincent Lalanne | About</title>
+    <meta name="description" content="About Vincent Lalanne - ML Engineer at LIORA, graduated from Ecole des Mines de Saint-Etienne and University of Auckland. Building production ML systems and teaching AI to enterprise teams." />
     <link rel="stylesheet" href="css/styles_common.css" />
     <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
     <link rel="stylesheet" href="../src/fonts/fonts.css" />
@@ -28,20 +29,16 @@
                 </div>
                 <div class="description-text">
                     <p class="js-hidden two-s">
-                        My name is Vincent and I studied at the École des Mines de Saint-Étienne, a prestigious French
-                        engineering school specialisd in computer science and microelectronics.
+                        I studied Computer Science and Microelectronics at the Ecole des Mines de Saint-Etienne, one of France's top engineering schools, and spent a year at the University of Auckland in New Zealand.
                     </p>
                     <p class="js-hidden two-s">
-                        I believe that knowing how a computer works at the hardware level allows a deeper thinking and
-                        better efficiency on the code I write.
+                        I now work as an ML Engineer at LIORA in Paris, where I built a RAG platform serving 150 employees daily across 5 FastAPI microservices and 13 containers. I also hold top-rated instructor status for delivering GenAI and MLOps masterclasses to engineering teams at companies like Thales, TotalEnergies, and Safran.
                     </p>
-                    <p class="js-hidden two-s">This is particularly true in Data Science. Understanding the theory
-                        behind a model allows for a much more intuitive optimisation!</p>
-                    <p class="js-hidden two-s">I feel motivated by knowing that my contribution will be useful to other
-                        people, and am always looking for new challenges and opportunities to learn and grow.</p>
                     <p class="js-hidden two-s">
-                        I am currently looking for building up experience, and discovering new work environments. Check
-                        out my CV <a href="../static/cv/cv.pdf" target="_blank" style="color: #62626f;">here</a>!
+                        My work spans LLM applications, real-time data engineering, MLOps pipelines, and production observability. I care about building systems that actually run in production and not just in notebooks.
+                    </p>
+                    <p class="js-hidden two-s">
+                        Outside of work, I speak French, English, Japanese, and some Spanish. Take a look at my <a href="projects.html" onclick="handleProjectsClick()" style="color: #52525e;">projects</a> or check out my <a href="../static/cv/cv.pdf" target="_blank" style="color: #52525e;">CV</a>.
                     </p>
                 </div>
             </div>
@@ -53,11 +50,11 @@
     <div class="white-background">
         <div class="margin-div">
             <div class="experiences-title">
-                My experiences
+                Experience
             </div>
             <div class="experiences">
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : DataScientest -->
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Job : LIORA -->
                     <div class="job-country">
                         <div>
                             <img src="../static/images/flags/flag_fr.png" />
@@ -71,15 +68,36 @@
                         <img src="../static/images/experiences/logo_dst.png" />
                     </div>
                     <div class="job-title">
-                        Machine Learning Engineer
+                        ML Engineer
                     </div>
                     <div class="job-description">
-                        I created training content for Data Science and gave B2B and B2C masterclasses, gaining in-depth
-                        knowledge of the field.
+                        Built a production RAG platform (5 microservices, 13 containers) used daily by 150 employees. Earned top-rated instructor status delivering GenAI and MLOps masterclasses to enterprise teams. Led junior teams on document extraction and multimodal ML projects.
                     </div>
                 </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : Auckland -->
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Education : Mines -->
+                    <div class="job-country">
+                        <div>
+                            <img src="../static/images/flags/flag_fr.png" />
+                            <p>Saint-Etienne</p>
+                        </div>
+                        <div>
+                            2021 -<br />
+                            2025
+                        </div>
+                    </div>
+                    <div class="job-logo">
+                        <img src="../static/images/experiences/ml_project.png" />
+                    </div>
+                    <div class="job-title">
+                        Ecole des Mines
+                    </div>
+                    <div class="job-description">
+                        MEng in Computer Science and Microelectronics at one of France's top 10 engineering schools. Coursework in Machine Learning, Deep Learning, C/C++, and Software Architecture.
+                    </div>
+                </div>
+                <div class="experience-card js-animation-2 js-hidden">
+                    <!-- Education : Auckland -->
                     <div class="job-country">
                         <div>
                             <img src="../static/images/flags/flag_nz.png" />
@@ -94,39 +112,10 @@
                         <img src="../static/images/experiences/logo_uoa.png" />
                     </div>
                     <div class="job-title">
-                        The University of Auckland
+                        University of Auckland
                     </div>
                     <div class="job-description">
-                        Studying at the other end of the world is a way for me to gain perspective on subjects I like
-                        while challenging myself.
-                    </div>
-                </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job : project -->
-                    <div class="job-country">
-                        <div>
-                            <img src="../static/images/flags/flag_fr.png" />
-                            <p>France</p>
-                        </div>
-                        <div>2024</div>
-                    </div>
-                    <div class="job-logo">
-                        <img src="../static/images/experiences/ml_project.png" />
-                    </div>
-                    <div class="long-job-title">
-                        Projects
-                    </div>
-                    <div class="job-description">
-                        In my free time, I like to investigate those subjects deeper. Learn more in my <a
-                            href="../static/cv/cv.pdf" target="_blank" style="color: #62626f;">CV</a> or in the <a
-                            onclick="handleProjectsClick()" href="projects.html" style="color: #62626f;">Projects</a>
-                        section!
-                    </div>
-                </div>
-                <div class="js-animation-2 js-hidden">
-                    <!-- Job seek -->
-                    <div class="job-seek-message">
-                        It is a bit empty here... Would you help me to fill it?
+                        Certificate in Computer Science and Software Engineering at a top-100 global university (QS). Focus on Machine Learning, Software Architecture, OOP, and Database Systems.
                     </div>
                 </div>
             </div>
