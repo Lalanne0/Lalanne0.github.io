@@ -1,7 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Redirection</title>
-        <meta http-equiv="refresh" content="0; URL=en/index.html" />
+        <meta charset="UTF-8" />
+        <title>Vincent Lalanne</title>
+        <meta http-equiv="refresh" content="0; url=en/index.html" />
+        <link rel="canonical" href="en/index.html" />
+        <script>
+            // Send French-speaking visitors to the French version.
+            if ((navigator.language || "").toLowerCase().startsWith("fr")) {
+                location.replace("fr/index.html");
+            }
+        </script>
     </head>
-    <body></body>
+    <body>
+        <p><a href="en/index.html">English</a> · <a href="fr/index.html">Français</a></p>
+    </body>
 </html>

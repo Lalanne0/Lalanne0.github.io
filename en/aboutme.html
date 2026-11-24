@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vincent Lalanne | About</title>
     <meta name="description" content="About Vincent Lalanne - ML Engineer at LIORA, graduated from Ecole des Mines de Saint-Etienne and University of Auckland. Building production ML systems and teaching AI to enterprise teams." />
-    <link rel="stylesheet" href="css/styles_common.css" />
+    <link rel="stylesheet" href="../static/fonts/fonts.css" />
+    <link rel="stylesheet" href="../static/css/styles_common.css" />
     <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
-    <link rel="stylesheet" href="../src/fonts/fonts.css" />
     <link rel="icon" href="../static/images/website_logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body data-page="aboutme">
     <!-- Homepage -->
     <div class="homepage-background">
         <div class="home-circle-div">
-            <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
+            <img class="parallax gradient-circle circle-1" data-depth="4" src="../static/images/gradient_circle.png" alt="" />
         </div>
         <div class="home-circle-div">
-            <img class="parallax gradient-circle circle-2" name="6" src="../static/images/gradient_circle.png" />
+            <img class="parallax gradient-circle circle-2" data-depth="6" src="../static/images/gradient_circle.png" alt="" />
         </div>
 
-        <div class="margin-div homepage-div js-animation-aboutme">
+        <div class="margin-div homepage-div">
             <div class="aboutme-div">
-                <div class="aboutme-text js-hidden two-s">
+                <div class="aboutme-text js-hidden two-s" data-delay="0">
                     <p class="aboutme-p">About me</p>
                 </div>
                 <div class="description-text">
-                    <p class="js-hidden two-s">
+                    <p class="js-hidden two-s" data-delay="100">
                         I studied Computer Science and Microelectronics at the Ecole des Mines de Saint-Etienne, one of France's top engineering schools, and spent a year at the University of Auckland in New Zealand.
                     </p>
-                    <p class="js-hidden two-s">
+                    <p class="js-hidden two-s" data-delay="200">
                         I now work as an ML Engineer at LIORA in Paris, where I built a RAG platform serving 150 employees daily across 5 FastAPI microservices and 13 containers. I also hold top-rated instructor status for delivering GenAI and MLOps masterclasses to engineering teams at companies like Thales, TotalEnergies, and Safran.
                     </p>
-                    <p class="js-hidden two-s">
+                    <p class="js-hidden two-s" data-delay="300">
                         My work spans LLM applications, real-time data engineering, MLOps pipelines, and production observability. I care about building systems that actually run in production and not just in notebooks.
                     </p>
-                    <p class="js-hidden two-s">
-                        Outside of work, I speak French, English, Japanese, and some Spanish. Take a look at my <a href="projects.html" onclick="handleProjectsClick()" style="color: #52525e;">projects</a> or check out my <a href="../static/cv/cv.pdf" target="_blank" style="color: #52525e;">CV</a>.
+                    <p class="js-hidden two-s" data-delay="400">
+                        Outside of work, I speak French, English, Japanese, and some Spanish. Take a look at my <a href="projects.html" class="inline-link">projects</a> or check out my <a href="../static/cv/cv.pdf" target="_blank" rel="noopener" class="inline-link">CV</a>.
                     </p>
                 </div>
             </div>
-            <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" />
+            <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" alt="Vincent Lalanne" data-delay="0" />
         </div>
     </div>
 
@@ -53,11 +53,11 @@
                 Experience
             </div>
             <div class="experiences">
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Job : LIORA -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_fr.png" />
+                            <img src="../static/images/flags/flag_fr.png" alt="" />
                             <p>Paris</p>
                         </div>
                         <div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/logo_dst.png" />
+                        <img src="../static/images/experiences/logo_dst.png" alt="" />
                     </div>
                     <div class="job-title">
                         ML Engineer
@@ -74,11 +74,11 @@
                         Built a production RAG platform (5 microservices, 13 containers) used daily by 150 employees. Earned top-rated instructor status delivering GenAI and MLOps masterclasses to enterprise teams. Led junior teams on document extraction and multimodal ML projects.
                     </div>
                 </div>
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Education : Mines -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_fr.png" />
+                            <img src="../static/images/flags/flag_fr.png" alt="" />
                             <p>Saint-Etienne</p>
                         </div>
                         <div>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/ml_project.png" />
+                        <img src="../static/images/experiences/ml_project.png" alt="" />
                     </div>
                     <div class="job-title">
                         Ecole des Mines
@@ -96,11 +96,11 @@
                         MEng in Computer Science and Microelectronics at one of France's top 10 engineering schools. Coursework in Machine Learning, Deep Learning, C/C++, and Software Architecture.
                     </div>
                 </div>
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Education : Auckland -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_nz.png" />
+                            <img src="../static/images/flags/flag_nz.png" alt="" />
                             <p>New Zealand</p>
                         </div>
                         <div>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/logo_uoa.png" />
+                        <img src="../static/images/experiences/logo_uoa.png" alt="" />
                     </div>
                     <div class="job-title">
                         University of Auckland
@@ -128,56 +128,31 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class="mobile-navbar">
+    <nav class="mobile-navbar">
         <div class="mobile-tabs">
-            <div>
-                <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-            </div>
-            <div class="mobile-flag" onclick="changeLanguage()"></div>
+            <div data-tab="home"><a class="tab" href="index.html">Home</a></div>
+            <div data-tab="aboutme"><a class="tab" href="aboutme.html">About me</a></div>
+            <div data-tab="projects"><a class="tab" href="projects.html">Projects</a></div>
+            <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+            <button class="mobile-flag" type="button" aria-label="Version française"></button>
         </div>
-    </div>
+    </nav>
 
     <!-- Header -->
-    <div class="header">
+    <header class="header">
         <div class="header-flex">
-            <div>
-                <img class="header-image" src="../static/images/website_logo.png"
-                    onclick="window.location='index.html';" />
-            </div>
-            <div class="tabs">
-                <div>
-                    <a class="tab" onclick="handleHomeClick()" href="index.html">Home</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleAboutMeClick()" href="">About me</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-                </div>
-            </div>
-            <div>
-                <div class="top-right-image" onclick="handleTopRightClick()"></div>
-            </div>
+            <a href="index.html"><img class="header-image" src="../static/images/website_logo.png" alt="Vincent Lalanne" /></a>
+            <nav class="tabs">
+                <div data-tab="home"><a class="tab" href="index.html">Home</a></div>
+                <div data-tab="aboutme"><a class="tab" href="aboutme.html">About me</a></div>
+                <div data-tab="projects"><a class="tab" href="projects.html">Projects</a></div>
+                <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+            </nav>
+            <button class="top-right-image" type="button" aria-label="Switch to French / open menu" aria-expanded="false"></button>
         </div>
-    </div>
+    </header>
 
-    <script src="../src/js/animations.js"></script>
-    <script src="../src/js/parallax.js"></script>
-    <script src="../src/js/top_right_button.js"></script>
-    <script src="../src/js/tabs.js"></script>
-    <script src="../src/js/aboutme_homepage.js"></script>
+    <script src="../static/js/main.js"></script>
 </body>
 
 </html>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth;">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <title>Vincent Lalanne | Projets</title>
-        <meta name="description" content="Projets techniques de Vincent Lalanne : systemes RAG en production, inference ML a faible latence, solveurs NLP et packages de calcul scientifique." />
-        <link rel="stylesheet" href="css/styles_common.css" />
-        <link rel="stylesheet" href="../static/css/styles_projects.css" />
-        <link rel="stylesheet" href="../src/fonts/fonts.css" />
-        <link rel="icon" href="../static/images/website_logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vincent Lalanne | Projets</title>
+        <meta name="description" content="Projets techniques de Vincent Lalanne : systèmes RAG en production, inférence ML à faible latence, solveurs NLP et packages de calcul scientifique." />
+        <link rel="stylesheet" href="../static/fonts/fonts.css" />
+        <link rel="stylesheet" href="../static/css/styles_common.css" />
+        <link rel="stylesheet" href="../static/css/styles_projects.css" />
+        <link rel="icon" href="../static/images/website_logo.png" />
     </head>
 
-    <body>
+    <body data-page="projects">
         <!-- Homepage -->
         <div class="homepage-background">
             <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
+                <img class="parallax gradient-circle circle-1" data-depth="4" src="../static/images/gradient_circle.png" alt="" />
             </div>
             <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-2" name="4" src="../static/images/gradient_circle.png" />
+                <img class="parallax gradient-circle circle-2" data-depth="4" src="../static/images/gradient_circle.png" alt="" />
             </div>
-            <div class="js-animation-projects-title">
-                <div class="projects-title js-hidden two-s">
+            <div>
+                <div class="projects-title js-hidden two-s" data-delay="0">
                     Projets
                 </div>
-                <div class="projects-subtitle js-hidden two-s">
-                    Une sélection de ce que j'ai construit, des systemes en production aux outils open-source.
+                <div class="projects-subtitle js-hidden two-s" data-delay="200">
+                    Une sélection de ce que j'ai construit, des systèmes en production aux outils open-source.
                 </div>
             </div>
         </div>
@@ -51,78 +51,98 @@
                             <span class="article-tile-tag">Prometheus</span>
                             <span class="article-tile-tag">Grafana</span>
                         </div>
-                        <span class="article-tile-link" style="color: #8b8b9a; cursor: default;">Propriétaire</span>
+                        <span class="article-tile-link muted">Propriétaire</span>
                     </div>
                 </div>
 
-                <!-- Low-Latency Stock Predictor -->
-                <a href="https://github.com/Lalanne0/low-latency-prediction" target="_blank">
-                    <div class="article-tile js-hidden">
-                        <div class="article-tile-content">
-                            <h2 class="article-tile-title">Low-Latency Stock Predictor</h2>
-                            <p class="article-tile-subtitle">Optimisation d'inférence en temps réel</p>
-                            <p class="article-tile-description">
-                                Réduction de latence de 15-25x (de ~100 µs baseline sklearn à ~6 µs) par des optimisations progressives au niveau du compilateur : contournement de scikit-learn avec du NumPy brut, fusion algébrique du StandardScaler dans les poids du modèle pour une normalisation à coût zéro, downcast en float32, et compilation du chemin critique via Numba @njit / LLVM. Streaming de prédictions en temps réel via WebSocket vers un terminal TradingView avec un build Docker multi-stage et un mode démo à données synthétiques.
-                            </p>
-                            <div class="article-tile-tags">
-                                <span class="article-tile-tag">Python</span>
-                                <span class="article-tile-tag">Numba</span>
-                                <span class="article-tile-tag">NumPy</span>
-                                <span class="article-tile-tag">WebSocket</span>
-                                <span class="article-tile-tag">Docker</span>
-                                <span class="article-tile-tag">LLVM</span>
-                            </div>
-                            <span class="article-tile-link">
-                                Voir sur GitHub
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
-                            </span>
+                <!-- Honing MLE Skills -->
+                <a class="article-tile js-hidden" href="https://github.com/Lalanne0/honing-mle-skills" target="_blank" rel="noopener">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Honing MLE Skills</h2>
+                        <p class="article-tile-subtitle">Workflow d'ingénierie agentique avec Claude Code</p>
+                        <p class="article-tile-description">
+                            Une expérience de deux jours : faire de Claude Code l'implémenteur principal tout en gardant chaque changement auditable. Les tickets Linear, avec des relations de blocage explicites, sont l'unique source de vérité, et un skill <code>/next</code> maison confie jusqu'à trois tickets débloqués à des agents Claude Code autonomes, chacun isolé dans son propre git worktree et son espace cmux. Chaque agent travaille en TDD avec ub-mode, doit passer des seuils de score CRAP, de duplication et de mutation testing, vérifie l'interface via Playwright MCP et a droit à deux tours de revue CodeRabbit au maximum. Un skill <code>/land</code> ne fusionne que si la CI et la revue passent sur le commit exact qu'il a vérifié, fait rebaser les agents encore actifs et lance le lot suivant. Les garde-fous tiennent dans un CLAUDE.md de projet et une liste blanche de commandes restreinte. Le produit lui-même est un entraîneur aux entretiens de system design ML, noté par un LLM.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">Claude Code</span>
+                            <span class="article-tile-tag">Agent Skills</span>
+                            <span class="article-tile-tag">Linear MCP</span>
+                            <span class="article-tile-tag">Git worktrees</span>
+                            <span class="article-tile-tag">cmux</span>
+                            <span class="article-tile-tag">CodeRabbit</span>
+                            <span class="article-tile-tag">Playwright MCP</span>
+                            <span class="article-tile-tag">Mutation testing</span>
+                            <span class="article-tile-tag">GitHub Actions</span>
                         </div>
+                        <span class="article-tile-link">
+                            Voir sur GitHub
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Low-Latency Stock Predictor -->
+                <a class="article-tile js-hidden" href="https://github.com/Lalanne0/low-latency-prediction" target="_blank" rel="noopener">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Low-Latency Stock Predictor</h2>
+                        <p class="article-tile-subtitle">Optimisation d'inférence en temps réel</p>
+                        <p class="article-tile-description">
+                            Réduction de latence de 15-25x (de ~100 µs baseline sklearn à ~6 µs) par des optimisations progressives au niveau du compilateur : contournement de scikit-learn avec du NumPy brut, fusion algébrique du StandardScaler dans les poids du modèle pour une normalisation à coût zéro, downcast en float32, et compilation du chemin critique via Numba @njit / LLVM. Streaming de prédictions en temps réel via WebSocket vers un terminal TradingView avec un build Docker multi-stage et un mode démo à données synthétiques.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">Python</span>
+                            <span class="article-tile-tag">Numba</span>
+                            <span class="article-tile-tag">NumPy</span>
+                            <span class="article-tile-tag">WebSocket</span>
+                            <span class="article-tile-tag">Docker</span>
+                            <span class="article-tile-tag">LLVM</span>
+                        </div>
+                        <span class="article-tile-link">
+                            Voir sur GitHub
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                        </span>
                     </div>
                 </a>
 
                 <!-- Semantix Breaker -->
-                <a href="https://github.com/Lalanne0/semantix-breaker" target="_blank">
-                    <div class="article-tile js-hidden">
-                        <div class="article-tile-content">
-                            <h2 class="article-tile-title">Semantix Breaker</h2>
-                            <p class="article-tile-subtitle">Solveur sémantique de jeu de mots par IA</p>
-                            <p class="article-tile-description">
-                                Construction d'un moteur de similarité bilingue (EN/FR) en temps réel qui identifie un mot caché parmi 5 000 candidats en minimisant l'erreur de similarité cosinus. Interrogation en direct du modèle Word2Vec de Google (3M mots) et de 60 000 vecteurs FastText français (~800 Mo de corpus), avec des calculs de distance NumPy vectorisés pour des temps de réponse inférieurs à la milliseconde.
-                            </p>
-                            <div class="article-tile-tags">
-                                <span class="article-tile-tag">Python</span>
-                                <span class="article-tile-tag">Word2Vec</span>
-                                <span class="article-tile-tag">FastText</span>
-                                <span class="article-tile-tag">NumPy</span>
-                                <span class="article-tile-tag">Docker</span>
-                            </div>
-                            <span class="article-tile-link">
-                                Voir sur GitHub
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
-                            </span>
+                <a class="article-tile js-hidden" href="https://github.com/Lalanne0/semantix-breaker" target="_blank" rel="noopener">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Semantix Breaker</h2>
+                        <p class="article-tile-subtitle">Solveur sémantique de jeu de mots par IA</p>
+                        <p class="article-tile-description">
+                            Construction d'un moteur de similarité bilingue (EN/FR) en temps réel qui identifie un mot caché parmi 5 000 candidats en minimisant l'erreur de similarité cosinus. Interrogation en direct du modèle Word2Vec de Google (3M mots) et de 60 000 vecteurs FastText français (~800 Mo de corpus), avec des calculs de distance NumPy vectorisés pour des temps de réponse inférieurs à la milliseconde.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">Python</span>
+                            <span class="article-tile-tag">Word2Vec</span>
+                            <span class="article-tile-tag">FastText</span>
+                            <span class="article-tile-tag">NumPy</span>
+                            <span class="article-tile-tag">Docker</span>
                         </div>
+                        <span class="article-tile-link">
+                            Voir sur GitHub
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                        </span>
                     </div>
                 </a>
 
                 <!-- Torque Clustering -->
-                <a href="https://github.com/Lalanne0/torque-clustering-python" target="_blank">
-                    <div class="article-tile js-hidden">
-                        <div class="article-tile-content">
-                            <h2 class="article-tile-title">Torque Clustering</h2>
-                            <p class="article-tile-subtitle">Portage de package MATLAB vers Python</p>
-                            <p class="article-tile-description">
-                                Portage d'un algorithme de clustering innovant de MATLAB vers un package Python installable. Modernisation des opérations sur les tableaux pour la compatibilité NumPy 2.0 et intégration de benchmarks scikit-learn sur des jeux de données classiques en haute dimension, rendant l'algorithme accessible à la communauté ML Python.
-                            </p>
-                            <div class="article-tile-tags">
-                                <span class="article-tile-tag">Python</span>
-                                <span class="article-tile-tag">NumPy</span>
-                                <span class="article-tile-tag">Scikit-learn</span>
-                            </div>
-                            <span class="article-tile-link">
-                                Voir sur GitHub
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
-                            </span>
+                <a class="article-tile js-hidden" href="https://github.com/Lalanne0/torque-clustering-python" target="_blank" rel="noopener">
+                    <div class="article-tile-content">
+                        <h2 class="article-tile-title">Torque Clustering</h2>
+                        <p class="article-tile-subtitle">Portage de package MATLAB vers Python</p>
+                        <p class="article-tile-description">
+                            Portage d'un algorithme de clustering innovant de MATLAB vers un package Python installable. Modernisation des opérations sur les tableaux pour la compatibilité NumPy 2.0 et intégration de benchmarks scikit-learn sur des jeux de données classiques en haute dimension, rendant l'algorithme accessible à la communauté ML Python.
+                        </p>
+                        <div class="article-tile-tags">
+                            <span class="article-tile-tag">Python</span>
+                            <span class="article-tile-tag">NumPy</span>
+                            <span class="article-tile-tag">Scikit-learn</span>
                         </div>
+                        <span class="article-tile-link">
+                            Voir sur GitHub
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+                        </span>
                     </div>
                 </a>
 
@@ -130,54 +150,30 @@
         </div>
 
         <!-- Mobile Navbar -->
-        <div class="mobile-navbar">
+        <nav class="mobile-navbar">
             <div class="mobile-tabs">
-                <div>
-                    <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleProjectsClick()" href="">Projets</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-                </div>
-                <div class="mobile-flag" onclick="changeLanguage()"></div>
+                <div data-tab="home"><a class="tab" href="index.html">Accueil</a></div>
+                <div data-tab="aboutme"><a class="tab" href="aboutme.html">À propos</a></div>
+                <div data-tab="projects"><a class="tab" href="projects.html">Projets</a></div>
+                <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+                <button class="mobile-flag" type="button" aria-label="English version"></button>
             </div>
-        </div>
+        </nav>
 
         <!-- Header -->
-        <div class="header">
+        <header class="header">
             <div class="header-flex">
-                <div>
-                    <img class="header-image" src="../static/images/website_logo.png" onclick="window.location='index.html';" />
-                </div>
-                <div class="tabs">
-                    <div>
-                        <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleProjectsClick()" href="">Projets</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="top-right-image" onclick="handleTopRightClick()"></div>
-                </div>
+                <a href="index.html"><img class="header-image" src="../static/images/website_logo.png" alt="Vincent Lalanne" /></a>
+                <nav class="tabs">
+                    <div data-tab="home"><a class="tab" href="index.html">Accueil</a></div>
+                    <div data-tab="aboutme"><a class="tab" href="aboutme.html">À propos</a></div>
+                    <div data-tab="projects"><a class="tab" href="projects.html">Projets</a></div>
+                    <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+                </nav>
+                <button class="top-right-image" type="button" aria-label="Switch to English / ouvrir le menu" aria-expanded="false"></button>
             </div>
-        </div>
+        </header>
 
-        <!-- Scripts -->
-        <script src="../src/js/animations.js"></script>
-        <script src="../src/js/parallax.js"></script>
-        <script src="../src/js/top_right_button.js"></script>
-        <script src="../src/js/tabs.js"></script>
+        <script src="../static/js/main.js"></script>
     </body>
 </html>

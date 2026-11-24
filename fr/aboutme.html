@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth;">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Vincent Lalanne | A propos</title>
-    <meta name="description" content="A propos de Vincent Lalanne - ML Engineer chez LIORA, diplome de l'Ecole des Mines de Saint-Etienne et de l'University of Auckland. Construction de systemes ML en production et enseignement de l'IA a des equipes en entreprise." />
-    <link rel="stylesheet" href="css/styles_common.css" />
-    <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
-    <link rel="stylesheet" href="../src/fonts/fonts.css" />
-    <link rel="icon" href="../static/images/website_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent Lalanne | À propos</title>
+    <meta name="description" content="À propos de Vincent Lalanne - ML Engineer chez LIORA, diplômé de l'École des Mines de Saint-Étienne et de l'University of Auckland. Construction de systèmes ML en production et enseignement de l'IA à des équipes en entreprise." />
+    <link rel="stylesheet" href="../static/fonts/fonts.css" />
+    <link rel="stylesheet" href="../static/css/styles_common.css" />
+    <link rel="stylesheet" href="../static/css/styles_aboutme.css" />
+    <link rel="icon" href="../static/images/website_logo.png" />
 </head>
 
-<body>
+<body data-page="aboutme">
     <!-- Homepage -->
     <div class="homepage-background">
         <div class="home-circle-div">
-            <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
+            <img class="parallax gradient-circle circle-1" data-depth="4" src="../static/images/gradient_circle.png" alt="" />
         </div>
         <div class="home-circle-div">
-            <img class="parallax gradient-circle circle-2" name="6" src="../static/images/gradient_circle.png" />
+            <img class="parallax gradient-circle circle-2" data-depth="6" src="../static/images/gradient_circle.png" alt="" />
         </div>
 
-        <div class="margin-div homepage-div js-animation-aboutme">
+        <div class="margin-div homepage-div">
             <div class="aboutme-div">
-                <div class="aboutme-text js-hidden two-s">
-                    <p class="aboutme-p">A propos</p>
+                <div class="aboutme-text js-hidden two-s" data-delay="0">
+                    <p class="aboutme-p">À propos</p>
                 </div>
                 <div class="description-text">
-                    <p class="js-hidden two-s">
-                        J'ai etudie l'informatique et la microelectronique a l'Ecole des Mines de Saint-Etienne, l'une des meilleures ecoles d'ingenieurs de France, et j'ai passe un an a l'University of Auckland en Nouvelle-Zelande.
+                    <p class="js-hidden two-s" data-delay="100">
+                        J'ai étudié l'informatique et la microélectronique à l'École des Mines de Saint-Étienne, l'une des meilleures écoles d'ingénieurs de France, et j'ai passé un an à l'University of Auckland en Nouvelle-Zélande.
                     </p>
-                    <p class="js-hidden two-s">
-                        Je travaille actuellement comme ML Engineer chez LIORA a Paris, ou j'ai construit une plateforme RAG utilisee au quotidien par 150 collaborateurs, repartie sur 5 microservices FastAPI et 13 conteneurs. J'ai aussi obtenu le statut de formateur le mieux note pour mes masterclasses en GenAI et MLOps aupres d'equipes d'ingenieurs chez Thales, TotalEnergies et Safran.
+                    <p class="js-hidden two-s" data-delay="200">
+                        Je travaille actuellement comme ML Engineer chez LIORA à Paris, où j'ai construit une plateforme RAG utilisée au quotidien par 150 collaborateurs, répartie sur 5 microservices FastAPI et 13 conteneurs. J'ai aussi obtenu le statut de formateur le mieux noté pour mes masterclasses en GenAI et MLOps auprès d'équipes d'ingénieurs chez Thales, TotalEnergies et Safran.
                     </p>
-                    <p class="js-hidden two-s">
-                        Mon travail couvre les applications LLM, le data engineering temps reel, les pipelines MLOps et l'observabilite en production. Je tiens a construire des systemes qui tournent vraiment en production, pas seulement dans des notebooks.
+                    <p class="js-hidden two-s" data-delay="300">
+                        Mon travail couvre les applications LLM, le data engineering temps réel, les pipelines MLOps et l'observabilité en production. Je tiens à construire des systèmes qui tournent vraiment en production, pas seulement dans des notebooks.
                     </p>
-                    <p class="js-hidden two-s">
-                        En dehors du travail, je parle francais, anglais, japonais et un peu espagnol. N'hesitez pas a consulter mes <a href="projects.html" onclick="handleProjectsClick()" style="color: #52525e;">projets</a> ou mon <a href="../static/cv/cv.pdf" target="_blank" style="color: #52525e;">CV</a>.
+                    <p class="js-hidden two-s" data-delay="400">
+                        En dehors du travail, je parle français, anglais, japonais et un peu espagnol. N'hésitez pas à consulter mes <a href="projects.html" class="inline-link">projets</a> ou mon <a href="../static/cv/cv.pdf" target="_blank" rel="noopener" class="inline-link">CV</a>.
                     </p>
                 </div>
             </div>
-            <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" />
+            <img class="photo-uniform js-hidden two-s" src="../static/images/photo_me.jpg" alt="Vincent Lalanne" data-delay="0" />
         </div>
     </div>
 
@@ -53,11 +53,11 @@
                 Parcours
             </div>
             <div class="experiences">
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Job : LIORA -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_fr.png" />
+                            <img src="../static/images/flags/flag_fr.png" alt="" />
                             <p>Paris</p>
                         </div>
                         <div>
@@ -65,21 +65,21 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/logo_dst.png" />
+                        <img src="../static/images/experiences/logo_dst.png" alt="" />
                     </div>
                     <div class="job-title">
                         ML Engineer
                     </div>
                     <div class="job-description">
-                        Construction d'une plateforme RAG en production (5 microservices, 13 conteneurs) utilisee quotidiennement par 150 collaborateurs. Statut de formateur le mieux note pour des masterclasses GenAI et MLOps aupres d'equipes en entreprise. Encadrement d'equipes juniors sur des projets d'extraction de documents et de ML multimodal.
+                        Construction d'une plateforme RAG en production (5 microservices, 13 conteneurs) utilisée quotidiennement par 150 collaborateurs. Statut de formateur le mieux noté pour des masterclasses GenAI et MLOps auprès d'équipes en entreprise. Encadrement d'équipes juniors sur des projets d'extraction de documents et de ML multimodal.
                     </div>
                 </div>
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Education : Mines -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_fr.png" />
-                            <p>Saint-Etienne</p>
+                            <img src="../static/images/flags/flag_fr.png" alt="" />
+                            <p>Saint-Étienne</p>
                         </div>
                         <div>
                             2021 -<br />
@@ -87,21 +87,21 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/ml_project.png" />
+                        <img src="../static/images/experiences/ml_project.png" alt="" />
                     </div>
                     <div class="job-title">
-                        Ecole des Mines
+                        École des Mines
                     </div>
                     <div class="job-description">
-                        Diplome d'ingenieur en Informatique et Microelectronique dans l'une des 10 meilleures ecoles d'ingenieurs de France. Cours de Machine Learning, Deep Learning, C/C++ et Architecture Logicielle.
+                        Diplôme d'ingénieur en Informatique et Microélectronique dans l'une des 10 meilleures écoles d'ingénieurs de France. Cours de Machine Learning, Deep Learning, C/C++ et Architecture Logicielle.
                     </div>
                 </div>
-                <div class="experience-card js-animation-2 js-hidden">
+                <div class="experience-card js-hidden">
                     <!-- Education : Auckland -->
                     <div class="job-country">
                         <div>
-                            <img src="../static/images/flags/flag_nz.png" />
-                            <p>Nouvelle-Zelande</p>
+                            <img src="../static/images/flags/flag_nz.png" alt="" />
+                            <p>Nouvelle-Zélande</p>
                         </div>
                         <div>
                             2023 -<br />
@@ -109,13 +109,13 @@
                         </div>
                     </div>
                     <div class="job-logo">
-                        <img src="../static/images/experiences/logo_uoa.png" />
+                        <img src="../static/images/experiences/logo_uoa.png" alt="" />
                     </div>
                     <div class="job-title">
                         University of Auckland
                     </div>
                     <div class="job-description">
-                        Certificat en Informatique et Genie Logiciel dans une universite classee dans le top 100 mondial (QS). Cours en Machine Learning, Architecture Logicielle, POO et Systemes de Bases de Donnees.
+                        Certificat en Informatique et Génie Logiciel dans une université classée dans le top 100 mondial (QS). Cours en Machine Learning, Architecture Logicielle, POO et Systèmes de Bases de Données.
                     </div>
                 </div>
             </div>
@@ -128,56 +128,31 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class="mobile-navbar">
+    <nav class="mobile-navbar">
         <div class="mobile-tabs">
-            <div>
-                <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">A propos</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projets</a>
-            </div>
-            <div>
-                <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-            </div>
-            <div class="mobile-flag" onclick="changeLanguage()"></div>
+            <div data-tab="home"><a class="tab" href="index.html">Accueil</a></div>
+            <div data-tab="aboutme"><a class="tab" href="aboutme.html">À propos</a></div>
+            <div data-tab="projects"><a class="tab" href="projects.html">Projets</a></div>
+            <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+            <button class="mobile-flag" type="button" aria-label="English version"></button>
         </div>
-    </div>
+    </nav>
 
     <!-- Header -->
-    <div class="header">
+    <header class="header">
         <div class="header-flex">
-            <div>
-                <img class="header-image" src="../static/images/website_logo.png"
-                    onclick="window.location='index.html';" />
-            </div>
-            <div class="tabs">
-                <div>
-                    <a class="tab" onclick="handleHomeClick()" href="index.html">Accueil</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleAboutMeClick()" href="">A propos</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projets</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleContactClick()" href="index.html#contact">Contact</a>
-                </div>
-            </div>
-            <div>
-                <div class="top-right-image" onclick="handleTopRightClick()"></div>
-            </div>
+            <a href="index.html"><img class="header-image" src="../static/images/website_logo.png" alt="Vincent Lalanne" /></a>
+            <nav class="tabs">
+                <div data-tab="home"><a class="tab" href="index.html">Accueil</a></div>
+                <div data-tab="aboutme"><a class="tab" href="aboutme.html">À propos</a></div>
+                <div data-tab="projects"><a class="tab" href="projects.html">Projets</a></div>
+                <div data-tab="contact"><a class="tab" href="index.html#contact">Contact</a></div>
+            </nav>
+            <button class="top-right-image" type="button" aria-label="Switch to English / ouvrir le menu" aria-expanded="false"></button>
         </div>
-    </div>
+    </header>
 
-    <script src="../src/js/animations.js"></script>
-    <script src="../src/js/parallax.js"></script>
-    <script src="../src/js/top_right_button.js"></script>
-    <script src="../src/js/tabs.js"></script>
-    <script src="../src/js/aboutme_homepage.js"></script>
+    <script src="../static/js/main.js"></script>
 </body>
 
 </html>

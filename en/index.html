@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vincent Lalanne | ML Engineer</title>
         <meta name="description" content="Vincent Lalanne - ML Engineer shipping GenAI and NLP systems at scale. Built a RAG platform used daily by 150 employees. Teaching production ML to engineering teams across France." />
-        <link rel="stylesheet" href="css/styles_common.css" />
+        <link rel="stylesheet" href="../static/fonts/fonts.css" />
+        <link rel="stylesheet" href="../static/css/styles_common.css" />
         <link rel="stylesheet" href="../static/css/styles_index.css" />
-        <link rel="stylesheet" href="../src/fonts/fonts.css" />
         <link rel="icon" href="../static/images/website_logo.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body>
+    <body data-page="index">
         <!-- Homepage -->
         <div class="homepage-background" id="home">
             <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-1" name="4" src="../static/images/gradient_circle.png" />
+                <img class="parallax gradient-circle circle-1" data-depth="4" src="../static/images/gradient_circle.png" alt="" />
             </div>
             <div class="home-circle-div">
-                <img class="parallax gradient-circle circle-2" name="6" src="../static/images/gradient_circle.png" />
+                <img class="parallax gradient-circle circle-2" data-depth="6" src="../static/images/gradient_circle.png" alt="" />
             </div>
 
-            <div class="margin-div js-animation-homepage homepage-div">
+            <div class="margin-div homepage-div">
                 <div class="hello-text">
-                    <p class="hello-p js-hidden two-s">Hello,</p>
-                    <p class="hello-p js-hidden two-s">I'm Vincent</p>
+                    <p class="hello-p js-hidden two-s" data-delay="0">Hello,</p>
+                    <p class="hello-p js-hidden two-s" data-delay="200">I'm Vincent</p>
                 </div>
-                <div class="description-text js-hidden two-s">
+                <div class="description-text js-hidden two-s" data-delay="400">
                     ML Engineer shipping GenAI and NLP systems at scale. I built a RAG platform used daily by 150 employees and teach production ML to engineering teams across France.
                 </div>
             </div>
@@ -34,12 +34,12 @@
         <!-- Skills -->
         <div class="skills-background">
             <div class="margin-div">
-                <div class="js-animation-1">
+                <div>
                     <div class="skills-section-title js-hidden">What I work with</div>
                 </div>
-                <div class="skill-cards js-animation-1">
+                <div class="skill-cards">
                     <div class="skill-card js-hidden">
-                        <img class="skill-card-icon" src="../static/images/icons/icon_ai.png" />
+                        <img class="skill-card-icon" src="../static/images/icons/icon_ai.png" alt="" />
                         <h3 class="skill-card-title">ML and GenAI</h3>
                         <p class="skill-card-description">
                             Building and fine-tuning models for production, from classical ML to Transformer architectures and LLM-powered applications with RAG pipelines.
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="skill-card js-hidden">
-                        <img class="skill-card-icon" src="../static/images/icons/icon_programming.png" />
+                        <img class="skill-card-icon" src="../static/images/icons/icon_programming.png" alt="" />
                         <h3 class="skill-card-title">MLOps and Infrastructure</h3>
                         <p class="skill-card-description">
                             Designing and maintaining production ML pipelines: containerised microservices, CI/CD workflows, experiment tracking, and real-time data streaming.
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="skill-card js-hidden">
-                        <img class="skill-card-icon" src="../static/images/icons/icon_electronics.png" />
+                        <img class="skill-card-icon" src="../static/images/icons/icon_electronics.png" alt="" />
                         <h3 class="skill-card-title">Observability and Serving</h3>
                         <p class="skill-card-description">
                             Operating production systems with full observability stacks and serving ML models through high-performance APIs with vector search.
@@ -97,75 +97,51 @@
         <!-- Contact -->
         <div class="contact-background" id="contact">
             <div class="contact-circle-div">
-                <img class="parallax gradient-circle circle-3" style="margin: 0 auto; display: table;" name="3" src="../static/images/gradient_circle.png" />
+                <img class="parallax gradient-circle circle-3" data-depth="3" src="../static/images/gradient_circle.png" alt="" style="margin: 0 auto; display: table;" />
             </div>
-            <div class="contactdiv js-animation-contact">
+            <div class="contactdiv">
                 <div class="contact-title">
-                    <p class="hello-p js-hidden">Let's get in</p>
-                    <p class="hello-p js-hidden">touch</p>
+                    <p class="hello-p js-hidden" data-delay="0">Let's get in</p>
+                    <p class="hello-p js-hidden" data-delay="100">touch</p>
                 </div>
-                <div class="contact-text js-hidden">
+                <div class="contact-text js-hidden" data-delay="400">
                     Write me an email
                 </div>
-                <div class="email-text-div js-hidden">
+                <div class="email-text-div js-hidden" data-delay="500">
                     <a href="mailto:vlalanne0@gmail.com" class="email-text">vlalanne0@gmail.com</a>
                 </div>
-                <div class="contact-links js-hidden">
-                    <a href="https://www.linkedin.com/in/vincent-lalanne1/" target="_blank" class="contact-link">LinkedIn</a>
-                    <a href="https://github.com/Lalanne0" target="_blank" class="contact-link">GitHub</a>
+                <div class="contact-links js-hidden" data-delay="600">
+                    <a href="https://www.linkedin.com/in/vincent-lalanne1/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+                    <a href="https://github.com/Lalanne0" target="_blank" rel="noopener" class="contact-link">GitHub</a>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Navbar -->
-        <div class="mobile-navbar">
+        <nav class="mobile-navbar">
             <div class="mobile-tabs">
-                <div>
-                    <a class="tab" onclick="handleHomeClick()" href="#home">Home</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
-                </div>
-                <div>
-                    <a class="tab" onclick="handleContactClick()" href="#contact">Contact</a>
-                </div>
-                <div class="mobile-flag" onclick="changeLanguage()"></div>
+                <div data-tab="home"><a class="tab" href="#home">Home</a></div>
+                <div data-tab="aboutme"><a class="tab" href="aboutme.html">About me</a></div>
+                <div data-tab="projects"><a class="tab" href="projects.html">Projects</a></div>
+                <div data-tab="contact"><a class="tab" href="#contact">Contact</a></div>
+                <button class="mobile-flag" type="button" aria-label="Version française"></button>
             </div>
-        </div>
+        </nav>
 
         <!-- Header -->
-        <div class="header">
+        <header class="header">
             <div class="header-flex">
-                <div>
-                    <img class="header-image" src="../static/images/website_logo.png" onclick="window.location='#home';" />
-                </div>
-                <div class="tabs">
-                    <div>
-                        <a class="tab" onclick="handleHomeClick()" href="#home">Home</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleAboutMeClick()" href="aboutme.html">About me</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleProjectsClick()" href="projects.html">Projects</a>
-                    </div>
-                    <div>
-                        <a class="tab" onclick="handleContactClick()" href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="top-right-image" onclick="handleTopRightClick()"></div>
-                </div>
+                <a href="#home"><img class="header-image" src="../static/images/website_logo.png" alt="Vincent Lalanne" /></a>
+                <nav class="tabs">
+                    <div data-tab="home"><a class="tab" href="#home">Home</a></div>
+                    <div data-tab="aboutme"><a class="tab" href="aboutme.html">About me</a></div>
+                    <div data-tab="projects"><a class="tab" href="projects.html">Projects</a></div>
+                    <div data-tab="contact"><a class="tab" href="#contact">Contact</a></div>
+                </nav>
+                <button class="top-right-image" type="button" aria-label="Switch to French / open menu" aria-expanded="false"></button>
             </div>
-        </div>
+        </header>
 
-        <!-- Scripts -->
-        <script src="../src/js/animations.js"></script>
-        <script src="../src/js/parallax.js"></script>
-        <script src="../src/js/top_right_button.js"></script>
-        <script src="../src/js/tabs.js"></script>
+        <script src="../static/js/main.js"></script>
     </body>
 </html>

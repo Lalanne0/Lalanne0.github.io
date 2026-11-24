@@ -1,6 +1,24 @@
+html {
+    scroll-behavior: smooth;
+    --flag: url(../images/flags/flag_en.png);
+}
+
+html[lang="fr"] {
+    --flag: url(../images/flags/flag_fr.png);
+}
+
 body, html {
     height: 100%;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.inline-link {
+    color: #52525e;
+    text-decoration: underline;
 }
 
 .margin-div {
@@ -8,13 +26,6 @@ body, html {
     width: 70%;
 }
 
-.flex {
-    display: flex;
-}
-
-b {
-    color: #1a1a22;
-}
 
 
 /* Header */
@@ -47,6 +58,10 @@ b {
     z-index: 2;
 }
 
+.mobile-navbar.open {
+    transform: translateX(0);
+}
+
 .header-flex {
     margin: auto;
     display: flex;
@@ -66,7 +81,10 @@ b {
     height: 4.3vh;
     width: 4.3vh;
     top: 25%;
-    background-image: url(../../static/images/flags/flag_en.png);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: var(--flag);
     background-size: cover;
     cursor: pointer;
     border-radius: 50%;
@@ -103,8 +121,12 @@ b {
 .mobile-flag {
     height: 4.3vh;
     width: 4.3vh;
-    background-image: url(../../static/images/flags/flag_en.png);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: var(--flag);
     background-size: cover;
+    cursor: pointer;
     margin: auto;
     margin-top: 2vh;
     border-radius: 50%;
@@ -148,6 +170,17 @@ b {
 }
 
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .js-hidden,
+    .two-s {
+        transition: none;
+    }
+}
+
+
 /* Responsive */
 
 @media (max-width: 1000px) {
@@ -158,7 +191,7 @@ b {
 
 @media (max-width: 800px) {
     .top-right-image {
-        background-image: url(../../static/images/icons/icon_menu.png);
+        background-image: url(../images/icons/icon_menu.png);
         border-radius: 0;
     }
     .tabs {
